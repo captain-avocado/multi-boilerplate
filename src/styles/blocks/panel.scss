@@ -2,4 +2,53 @@
   background: #FFFFFF;
   border-radius: 15px;
   padding: 20px 25px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &__close-link {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+  }
+
+  &__close-icon {
+    width: 20px;
+    height: 20px;
+    fill: $purple;
+  }
+
+  &__hint-link {
+    display: flex;
+    &:hover {
+
+      & + .popup-panel {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__hint-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    fill: #C4C4C4;
+    transition: fill .3s;
+
+    &:hover {
+      fill: $purple;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; 
+  }
 }

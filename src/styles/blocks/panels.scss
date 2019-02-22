@@ -1,6 +1,9 @@
 .panels {
+  display: flex;
   &__col {
-    width: 37.5%;
+    width: 35%;
+
+    margin-right: 2.5%;
 
     &--menu {
       width: 25%;

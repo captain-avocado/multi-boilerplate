@@ -1,0 +1,39 @@
+.web-info {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__title {
+    background: #F2F2F8;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+
+    margin-bottom: 30px;
+  }
+
+  &__types {
+    align-self: center;
+    margin-bottom: 40px;
+    display: flex;
+    border: 1px solid #5E5E7B;
+    padding: 3px;
+    border-radius: 20px;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; 
+  }
+
+  &__type {
+    padding: 2px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+
+    &--is-active {
+      background-color: $purple;
+      color: #fff;
+    }
+  }
+}

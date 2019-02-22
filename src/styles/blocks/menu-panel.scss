@@ -6,7 +6,7 @@
     padding: 17px 0 17px 25%;
     position: relative;
 
-    &:hover {
+    &:hover, &--is-active {
       background: linear-gradient(170.62deg, #F2F2F8 0%, #FFFFFF 93.99%);
 
       &:after {
