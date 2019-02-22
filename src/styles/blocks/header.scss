@@ -1,8 +1,56 @@
 .header {
-  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  background-color: #fff;
+  transition: background-color .35s;
 
-  @include phones {
-    height: 20px;
+  &__right, &__left {
+    display: flex;
+    align-items: center;
   }
 
+  &__right {
+    margin-right: auto;
+  }
+
+  &__logo {
+    padding: 0 .9375rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F8; 
+    transition: background-color .35s; 
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__menus {
+    display: flex;
+    margin-right: 14vw;
+  }
+
+  &__lang {
+    padding: 0 20px;
+    border-left: 1px solid #5E5E7B;
+    margin: auto;
+  }
+
+  &__web-num {
+    margin-right: 25px;
+  }
+
+  &__miss-off {
+    margin-right: 22px;
+    color: $purple;
+  }
+
+  &__text {
+    margin-left: 30px;
+  }
 }

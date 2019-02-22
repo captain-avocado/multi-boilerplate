@@ -5,20 +5,262 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./styles/main.css">
-  <style>
-    html, body {
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      border: 0;
-    }
-  </style>
-  <title>Страница</title>
+  <title>Webiray</title>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+  <div class="wrapper">
+    <header class="header">
+          <div class="header__right">
+            <div class="header__logo">
+              <a href="#"  class="logo">
+                <img class="logo__img" src="images/content/logo.svg" alt="logo">
+              </a>
+            </div>
+            <a href="./" class="header__text">Личный кабинет</a>
+          </div>
+          <div class="header__left">
+            <div class="header__menus">
+                <ul class="header__menu menu">   
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="about">
+                        О конструкторе
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="support">
+                        Помощь
+                      </a>
+                    </li>
+                  </ul>
+              <div class="header__lang lang">
+                <a href="#" class="lang__link">
+                  <div class="lang__text" id="lang">Русский</div>
+                  <svg class="lang__angle">
+                    <use xlink:href="images/sprite.svg#angle"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="header__info">
+              <div class="header__web-num web-num">
+                <a href="#" class="web-num__logo logo logo--web-num">
+                  <img src="images/content/logo.svg" alt="" class="logo__img">
+                </a>
+                <div class="web-num__text">10</div>
+              </div>
+              <a href="#" class="header__miss-off"  id="miss-off">Miss Off</a>
+            </div>
+          </div>
+    </header>
+    <main class="main">
+      <div class="tool-bar">
+        <div class="tool-bar__color-mode color-mode">
+          <div class="color-mode__icons">
+            <svg class="color-mode__day color-mode__icon">
+              <use xlink:href="images/sprite.svg#day"></use>
+            </svg>
+            <svg class="color-mode__night color-mode__icon">
+              <use xlink:href="images/sprite.svg#night"></use>
+            </svg>
+          </div>
+          <label class="color-mode__switch switch">
+            <input class="switch__input" type="checkbox">
+            <span class="switch__slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="main__content">
+        <div class="content">
+          <div class="content__webinar-list webinar-list">
+            <a href="#" class="webinar-list__add-new webinar">
+              <img src="images/content/plus.svg" class="webinar-list__plus">
+              <div class="webinar-list__text">Создать новый</div>
+            </a>
+            <ul class="webinar-list__list">
+              <li class="webinar-list__item">
+                <div class="webinar">
+                  <ul class="webinar__icon-list">
+                    <li class="webinar__icon-item">
+                      <a href="#" class="webinar__icon-link">
+                        <svg class="webinar__icon">
+                          <use xlink:href="images/sprite.svg#settingsWeb"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="webinar__icon-item">
+                        <a href="#" class="webinar__icon-link">
+                          <svg class="webinar__icon">
+                            <use xlink:href="images/sprite.svg#editWeb"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="webinar__icon-item">
+                          <a href="#" class="webinar__icon-link">
+                            <svg class="webinar__icon">
+                              <use xlink:href="images/sprite.svg#copyWeb"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="webinar__icon-item">
+                            <a href="#" class="webinar__icon-link">
+                              <svg class="webinar__icon">
+                                <use xlink:href="images/sprite.svg#crossWeb"></use>
+                              </svg>
+                            </a>
+                          </li>
+                  </ul>
+                  <a href="#" class="webinar__link">www.webiray.com /pshycology1</a>
+                </div>
+              </li>
+              <li class="webinar-list__item">
+                  <div class="webinar">
+                    <ul class="webinar__icon-list">
+                      <li class="webinar__icon-item">
+                        <a href="#" class="webinar__icon-link">
+                          <svg class="webinar__icon">
+                            <use xlink:href="images/sprite.svg#settingsWeb"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="webinar__icon-item">
+                          <a href="#" class="webinar__icon-link">
+                            <svg class="webinar__icon">
+                              <use xlink:href="images/sprite.svg#editWeb"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="webinar__icon-item">
+                            <a href="#" class="webinar__icon-link">
+                              <svg class="webinar__icon">
+                                <use xlink:href="images/sprite.svg#copyWeb"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="webinar__icon-item">
+                              <a href="#" class="webinar__icon-link">
+                                <svg class="webinar__icon">
+                                  <use xlink:href="images/sprite.svg#crossWeb"></use>
+                                </svg>
+                              </a>
+                            </li>
+                    </ul>
+                    <a href="#" class="webinar__link">www.webiray.com /pshycology1</a>
+                  </div>
+              </li>
+              <li class="webinar-list__item">
+                    <div class="webinar">
+                      <ul class="webinar__icon-list">
+                        <li class="webinar__icon-item">
+                          <a href="#" class="webinar__icon-link">
+                            <svg class="webinar__icon">
+                              <use xlink:href="images/sprite.svg#settingsWeb"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="webinar__icon-item">
+                            <a href="#" class="webinar__icon-link">
+                              <svg class="webinar__icon">
+                                <use xlink:href="images/sprite.svg#editWeb"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="webinar__icon-item">
+                              <a href="#" class="webinar__icon-link">
+                                <svg class="webinar__icon">
+                                  <use xlink:href="images/sprite.svg#copyWeb"></use>
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="webinar__icon-item">
+                                <a href="#" class="webinar__icon-link">
+                                  <svg class="webinar__icon">
+                                    <use xlink:href="images/sprite.svg#crossWeb"></use>
+                                  </svg>
+                                </a>
+                              </li>
+                      </ul>
+                      <a href="#" class="webinar__link">www.webiray.com /pshycology1</a>
+                    </div>
+              </li>
+              <li class="webinar-list__item">
+                      <div class="webinar">
+                        <ul class="webinar__icon-list">
+                          <li class="webinar__icon-item">
+                            <a href="#" class="webinar__icon-link">
+                              <svg class="webinar__icon">
+                                <use xlink:href="images/sprite.svg#settingsWeb"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="webinar__icon-item">
+                              <a href="#" class="webinar__icon-link">
+                                <svg class="webinar__icon">
+                                  <use xlink:href="images/sprite.svg#editWeb"></use>
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="webinar__icon-item">
+                                <a href="#" class="webinar__icon-link">
+                                  <svg class="webinar__icon">
+                                    <use xlink:href="images/sprite.svg#copyWeb"></use>
+                                  </svg>
+                                </a>
+                              </li>
+                              <li class="webinar__icon-item">
+                                  <a href="#" class="webinar__icon-link">
+                                    <svg class="webinar__icon">
+                                      <use xlink:href="images/sprite.svg#crossWeb"></use>
+                                    </svg>
+                                  </a>
+                                </li>
+                        </ul>
+                        <a href="#" class="webinar__link">www.webiray.com /pshycology1</a>
+                      </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content__manage">
+            <div class="content__manage-title">Управление</div>
+            <div class="content__manage-panels panels">
+              <div class="panels__col panels__col--menu">
+                <div class="panel panel--menu menu-panel">
+                  <ul class="menu-panel__list">
+                    <li class="menu-panel__item">
+                      <a href="#" class="menu-panel__link">
+                        Общая информация
+                      </a>
+                    </li>
+                    <li class="menu-panel__item">
+                        <a href="#" class="menu-panel__link">
+                          Аккаунт
+                        </a>
+                      </li>
+                      <li class="menu-panel__item">
+                          <a href="#" class="menu-panel__link">
+                            Вебинар
+                          </a>
+                        </li>
+                        <li class="menu-panel__item">
+                            <a href="#" class="menu-panel__link">
+                              Маркетинг
+                            </a>
+                          </li>
+                          <li class="menu-panel__item">
+                              <a href="#" class="menu-panel__link">
+                                Общие настройки
+                              </a>
+                            </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panels__col"></div>
+              <div class="panels__col"></div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </main>
+  </div>
   <script src="./scripts/main.js"></script>
 </body>
 </html>

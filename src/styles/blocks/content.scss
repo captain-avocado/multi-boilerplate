@@ -1,0 +1,18 @@
+.content {
+  flex: 1;
+
+  &__img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &__webinar-list {
+    margin-top: 33px;
+    margin-bottom: 70px;
+  }
+
+  &__manage-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+}

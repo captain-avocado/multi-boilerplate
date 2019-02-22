@@ -1,0 +1,58 @@
+.webinar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // width: 206px;
+  // height: 98px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: .75vw;
+  padding-bottom: .5vw;
+
+  justify-content: space-around;
+
+  width: 15vw;
+  height: 7vw;
+
+
+  &__icon-list {
+    display: flex;
+    // margin: 0 -4.5%;
+  }
+
+  &__icon-item {
+    &:not(:last-child) {
+      margin-right: 1vw;
+    }
+  }
+
+  &__icon-link {
+    display: block;
+    width: 2vw;
+    height: 2vw;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgba(111, 110, 255, 0.502);
+    transition: fill .2s;
+
+    &:hover {
+      fill: rgba(111, 110, 255, 1);
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    text-align: center;
+
+    // overflow-wrap: break-word;
+    // word-wrap: break-word;
+    // word-break: break-all;
+    // word-break: break-word;
+    // hyphens: auto;
+  }
+}

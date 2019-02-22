@@ -1,0 +1,27 @@
+.webinar-list {
+
+  display: flex;
+
+  &__add-new {
+    margin-right: 28px;
+  }
+
+  &__plus {
+    margin-bottom: 5px;
+    width: 25%;
+    height: 50%;
+  }
+
+  &__text {
+    color: $purple;
+    font-size: 14px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 28px;
+  }
+}
