@@ -19,6 +19,9 @@
     padding: 10px 15px;
     font-size: 14px;
     color: #5E5E7B;
+    &::placeholder {
+      opacity: .5;
+    }
   }
 
   &__hint {

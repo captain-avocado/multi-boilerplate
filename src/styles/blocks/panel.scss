@@ -5,10 +5,25 @@
   position: relative;
   margin-bottom: 20px;
 
+  &:hover {
+    & .panel__close-link {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & .panel__hint-link {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   &__close-link {
     position: absolute;
     right: 9px;
     top: 9px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
   }
 
   &__close-icon {
@@ -19,6 +34,11 @@
 
   &__hint-link {
     display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
+
+
     &:hover {
 
       & + .popup-panel {

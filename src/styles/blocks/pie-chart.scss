@@ -1,0 +1,46 @@
+.pie-chart {
+
+  height: 250px;
+  width: 100%;
+  position: relative;
+
+  &__chart {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // overflow: hidden;
+  }
+
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+    &--logged {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--paid {
+      left: 0;
+    }
+
+    &--think {
+      right: 0;
+    }
+  }
+
+  &__text-descr {
+    font-size: 14px;
+  }
+
+  &__text-num {
+    font-size: 24px;
+  }
+}

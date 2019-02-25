@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
   <title>Webiray</title>
 </head>
@@ -272,10 +273,10 @@
                         </div>
                     </div>
                   <div class="panel__content web-info__content">
-                    <div class="web-info__title">«Моя самооценка»</div>
-                    <div class="web-info__types">
-                      <a href="#" class="web-info__type web-info__type--is-active web-info__type--online">онлайн</a>
-                      <a href="#" class="web-info__type web-info__type--record">в записи</a>
+                    <div class="web-info__title title">«Моя самооценка»</div>
+                    <div class="web-info__types info-types">
+                      <a href="#" class="info-types__type info-types__type--is-active info-types__type--online">онлайн</a>
+                      <a href="#" class="info-types__type info-types__type--record">в записи</a>
                     </div>
                     <div class="web-info__calendar">
                       <div class="panel__title">
@@ -372,33 +373,37 @@
                     <div class="panel__content acc-info__content">
                       <div class="acc-info__title">Перед переходом к созданию Вашего первого вебинара, пожалуйста, заполните приведенные ниже поля.</div>
                       <div class="acc-info__subtitle">Это необходимо для дальнейшей настройки и проведения оплат </div>
-                      <div class="acc-info__input-area">
-                        <div class="acc-info__input-area-title">Паспортные данные</div>
-                        <ul class="acc-info__input-area-inputs inputs">
+                      <div class="acc-info__input-area input-area">
+                        <div class="input-area__title">Паспортные данные</div>
+                        <ul class="input-area__inputs inputs">
                           <li class="inputs__item">
                             <label for="" class="inputs__label">
                               <div class="inputs__text">ФИО</div>
                               <input type="text" class="inputs__input">
                               <div class="inputs__hint"></div>
                             </label>
+                            </li>
                             <li class="inputs__item">
                                 <label for="" class="inputs__label">
                                   <div class="inputs__text">Серия, номер</div>
                                   <input type="text" class="inputs__input">
                                   <div class="inputs__hint"></div>
                                 </label>
+                                </li>
                                 <li class="inputs__item">
                                     <label for="" class="inputs__label">
                                       <div class="inputs__text">Кем и когда выдан</div>
                                       <input placeholder="например, 1ОМ Центрального района ...," type="text" class="inputs__input">
                                       <div class="inputs__hint"></div>
                                     </label>
+                                    </li>
                                     <li class="inputs__item">
                                         <label for="" class="inputs__label">
                                           <div class="inputs__text">Адрес прописки</div>
                                           <input placeholder="например, Невский пр., дом 1, кв. 1" type="text" class="inputs__input">
                                           <div class="inputs__hint"></div>
                                         </label>
+                                    </li>
                             <li class="inputs__item">
                               <label for="" class="inputs__label">
                                 <div class="inputs__text">Загрузить скан паспорта</div>
@@ -416,7 +421,151 @@
                     </div>
                   </div>
               </div>
-              <div class="panels__col"></div>
+              <div class="panels__col">
+                <div class="panel panel--visits visits">
+                  <a href="#" class="panel__close-link">
+                    <svg class="panel__close-icon">
+                      <use xlink:href="images/sprite.svg#panel-close"></use>
+                    </svg>
+                  </a>
+                  <div class="panel__title">
+                      <div class="panel__title-text">Статистика посетителей</div>
+                      <a href="#" class="panel__hint-link">
+                        <svg class="panel__hint-icon">
+                          <use xlink:href="images/sprite.svg#question"></use>
+                        </svg>
+                      </a>
+                      <div class="popup-panel">
+                          Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек сих продолжил семантика курсивных великий все текст взобравшись от всех!
+                        </div>
+                    </div>
+                  <div class="panel__content visits__content">
+                      <div class="visits__types info-types">
+                          <a href="#" class="info-types__type info-types__type--all">всего</a>
+                          <a href="#" class="info-types__type info-types__type--today info-types__type--is-active">сегодня</a>
+                        </div>
+                    <div class="visits__chart pie-chart">
+                      <div class="pie-chart__chart">
+                        <svg viewBox="0 0 40 40">
+                          <path
+                            d="M20 4.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="none"
+                            stroke="#6F6EFF";
+                            stroke-width="6";
+                            stroke-dasharray="100, 100"
+                          />
+                          <path
+                            d="M20 4.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="none"
+                            stroke="#B7B6FF";
+                            stroke-width="6";
+                            stroke-dasharray="45, 100"
+                          />
+                        </svg>
+                      </div>
+                      <div class="pie-chart__text pie-chart__text--logged">
+                        <div class="pie-chart__text-descr">Зашли</div>
+                        <div class="pie-chart__text-num" id="logged">30</div>
+                      </div>
+                      <div class="pie-chart__text pie-chart__text--paid">
+                        <div class="pie-chart__text-descr">Заплатили</div>
+                        <div class="pie-chart__text-num" id="paid">20</div>
+                      </div>
+                      <div class="pie-chart__text pie-chart__text--think">
+                        <div class="pie-chart__text-descr">Думают</div>
+                        <div class="pie-chart__text-num" id="think">10</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel--web-info growth">
+                    <a href="#" class="panel__close-link">
+                      <svg class="panel__close-icon">
+                        <use xlink:href="images/sprite.svg#panel-close"></use>
+                      </svg>
+                    </a>
+                    <div class="panel__title">
+                        <div class="panel__title-text">Рост посещаемости</div>
+                        <a href="#" class="panel__hint-link">
+                          <svg class="panel__hint-icon">
+                            <use xlink:href="images/sprite.svg#question"></use>
+                          </svg>
+                        </a>
+                        <div class="popup-panel">
+                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек сих продолжил семантика курсивных великий все текст взобравшись от всех!
+                          </div>
+                      </div>
+                    <div class="panel__content growth__content">
+                      <div class="growth__info">
+                        <div class="growth__num">24</div>
+                        <svg class="growth__arrow">
+                          <use xlink:href="images/sprite.svg#growth"></use>
+                        </svg>
+                      </div>
+                      <div class="growth__chart">
+                        <div class="chart">
+                          <svg class="chart__svg" viewBox="0 0 200 100">
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel--web-info web-info">
+                      <a href="#" class="panel__close-link">
+                        <svg class="panel__close-icon">
+                          <use xlink:href="images/sprite.svg#panel-close"></use>
+                        </svg>
+                      </a>
+                      <div class="panel__title">
+                          <div class="panel__title-text">Информация о вебинаре</div>
+                          <a href="#" class="panel__hint-link">
+                            <svg class="panel__hint-icon">
+                              <use xlink:href="images/sprite.svg#question"></use>
+                            </svg>
+                          </a>
+                          <div class="popup-panel">
+                              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек сих продолжил семантика курсивных великий все текст взобравшись от всех!
+                            </div>
+                        </div>
+                      <div class="panel__content tariff__content">
+                        <div class="tariff__title title">Ваш тарифный план: ЛАЙТ</div>
+                        <div class="web-info__types info-types">
+                          <a href="#" class="info-types__type info-types__type--is-active info-types__type--online">онлайн</a>
+                          <a href="#" class="info-types__type info-types__type--record">в записи</a>
+                        </div>
+                        <div class="acc-info__input-area input-area">
+                            <div class="input-area__title">Персональные данные</div>
+                            <ul class="input-area__inputs inputs">
+                              <li class="inputs__item">
+                                <label for="" class="inputs__label">
+                                  <div class="inputs__text">Фамилия, Имя</div>
+                                  <input type="text" class="inputs__input">
+                                  <div class="inputs__hint"></div>
+                                </label>
+                                </li>
+                                <li class="inputs__item">
+                                  <label for="" class="inputs__label">
+                                    <div class="inputs__text">Город, страна</div>
+                                    <input placeholder="например, Москва, Россия" type="text" class="inputs__input">
+                                    <div class="inputs__hint"></div>
+                                  </label>
+                                </li>
+                                <li class="inputs__item">
+                                    <label for="" class="inputs__label">
+                                      <div class="inputs__text">Профессиональные интересы</div>
+                                      <input placeholder="например, психология, психоанализ" type="text" class="inputs__input">
+                                      <div class="inputs__hint"></div>
+                                    </label>
+                                  </li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+              </div>
             </div>
           </div> 
         </div>
