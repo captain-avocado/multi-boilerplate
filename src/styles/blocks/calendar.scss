@@ -2,6 +2,11 @@
   max-width: 278px;
   width: 70%;
 
+  @include phones {
+    width: 100%;
+    max-width: auto;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -9,6 +14,9 @@
     font-size: 12px;
     padding: 0 15px;
     margin-bottom: 15px;
+    @include phones {
+      font-size: 18px;
+    }
   }
 
   &__control {
@@ -19,6 +27,10 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+
+    @include phones {
+      margin-bottom: 10px;
+    }
   }
 
   &__cell-content {
@@ -37,6 +49,10 @@
     font-size: 12px;
     text-align: center;
     padding: 5px 0;
+
+    @include phones {
+      font-size: 18px;
+    }
 
     &--out {
       opacity: .5;

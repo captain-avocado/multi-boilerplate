@@ -22,4 +22,8 @@
     margin-right: 15px;
   }
 
+  @include phones {
+    display: none;
+  }
+
 }

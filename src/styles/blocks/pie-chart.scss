@@ -4,6 +4,10 @@
   width: 100%;
   position: relative;
 
+  @include phones {
+    height: 200px;
+  }
+
   &__chart {
     position: absolute;
     top: 50%;
@@ -12,6 +16,10 @@
 
     width: 60%;
     max-width: 250px;
+
+    @include phones {
+      max-width: 130px;
+    }
   }
 
 
@@ -37,9 +45,15 @@
 
   &__text-descr {
     font-size: 14px;
+    @include phones {
+      font-size: 12px;
+    }
   }
 
   &__text-num {
     font-size: 24px;
+    @include phones {
+      font-size: 16px;
+    }
   }
 }

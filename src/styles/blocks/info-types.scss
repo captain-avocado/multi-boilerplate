@@ -16,6 +16,10 @@
   align-items: center;
   font-size: 14px;
   border-radius: 15px;
+  @include phones {
+    font-size: 12px;
+    width: 77px;
+  }
 
   &--all, &--today {
     width: 75px;

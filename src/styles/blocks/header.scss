@@ -15,6 +15,10 @@
 
   &__right {
     margin-right: auto;
+
+    @include phones {
+      margin-right: 25px;
+    }
   }
 
   &__logo {
@@ -24,6 +28,11 @@
     align-items: center;
     background-color: #F2F2F8; 
     transition: background-color .35s; 
+
+    @include phones {
+      padding: 14px .9375rem;
+      background: none;
+    }
   }
 
   &__info {
@@ -33,6 +42,9 @@
   &__menus {
     display: flex;
     margin-right: 14vw;
+    @include phones {
+      display: none;
+    }
   }
 
   &__lang {
@@ -43,6 +55,9 @@
 
   &__web-num {
     margin-right: 25px;
+    @include phones {
+      display: none;
+    }
   }
 
   &__miss-off {
@@ -54,5 +69,9 @@
   &__text {
     margin-left: 30px;
     font-size: 18px;
+
+    @include phones {
+      display: none;
+    }
   }
 }

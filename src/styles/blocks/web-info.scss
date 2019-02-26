@@ -17,5 +17,8 @@
 
   &__types {
     margin-bottom: 40px;
+    @include phones {
+      margin-bottom: 25px;
+    }
   }
 }

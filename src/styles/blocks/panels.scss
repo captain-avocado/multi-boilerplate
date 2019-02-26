@@ -1,10 +1,20 @@
 .panels {
   display: flex;
+  @include phones {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   &__col {
     flex: 1;
+    // @include phones {
+    //   float: auto;
+    // }
 
     &:not(:last-child) {
       margin-right: 20px;
+      @include phones {
+        margin-right: 0;
+      }
     }
 
     &--menu {

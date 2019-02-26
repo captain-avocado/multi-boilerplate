@@ -16,4 +16,13 @@
     height: 12px;
     fill: $font-gray;
   }
+
+
+  @include phones {
+    width: 35px;
+    padding: 0;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
 }

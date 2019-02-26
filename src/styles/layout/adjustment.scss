@@ -25,6 +25,11 @@ body {
     margin-top: 80px;
     margin-left: 75px;
     margin-right: 75px;
+
+    @include phones {
+      margin: 0;
+      padding: 93px 22px 70px;
+    }
   }
 }
 

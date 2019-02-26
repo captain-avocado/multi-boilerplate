@@ -1,9 +1,17 @@
 .webinar-list {
 
+  @include phones {
+    overflow: auto;
+  }
+
   display: flex;
 
   &__add-new {
     margin-right: 28px;
+
+    @include phones {
+      display: none !important;
+    }
   }
 
   &__plus {
@@ -22,6 +30,11 @@
   }
 
   &__item {
-    margin-right: 28px;
+    &:not(:last-child) {
+      margin-right: 28px;
+      @include phones {
+        margin-right: 20px;
+      }
+    }
   }
 }

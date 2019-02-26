@@ -15,6 +15,9 @@
   width: 15vw;
   height: 7vw;
 
+  min-width: 153px;
+  min-height: 73px;
+
 
   &__icon-list {
     display: flex;
@@ -24,6 +27,9 @@
   &__icon-item {
     &:not(:last-child) {
       margin-right: 1vw;
+      @include phones {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -31,6 +37,8 @@
     display: block;
     width: 2vw;
     height: 2vw;
+    min-width: 20px;
+    min-height: 20px;
   }
 
   &__icon {
@@ -48,6 +56,10 @@
   &__link {
     font-size: 14px;
     text-align: center;
+
+    @include phones {
+      font-size: 12px;
+    }
 
     // overflow-wrap: break-word;
     // word-wrap: break-word;
