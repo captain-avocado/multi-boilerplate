@@ -19,9 +19,36 @@
     padding: 10px 15px;
     font-size: 14px;
     color: #5E5E7B;
+
+    &--fake {
+      height: 38.6px;
+    }
+
     &::placeholder {
       opacity: .5;
     }
+  }
+
+  &__file {
+    // position: absolute;
+    // z-index: 10;
+    // cursor: pointer;
+    // opacity: 0;
+    // width: 25px;
+    // right: .9375rem;
+    // top: 0;
+    // height: 25px;
+    // bottom: 0;
+
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
   }
 
   &__hint {

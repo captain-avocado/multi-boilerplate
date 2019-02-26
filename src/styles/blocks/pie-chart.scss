@@ -5,14 +5,13 @@
   position: relative;
 
   &__chart {
-    width: 250px;
-    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    // overflow: hidden;
+    width: 60%;
+    max-width: 250px;
   }
 
 

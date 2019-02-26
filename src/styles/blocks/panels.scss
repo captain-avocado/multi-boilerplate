@@ -1,12 +1,14 @@
 .panels {
   display: flex;
   &__col {
-    width: 35%;
+    flex: 1;
 
-    margin-right: 2.5%;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
 
     &--menu {
-      width: 25%;
+      flex: .8;
     }
   }
 }

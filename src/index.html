@@ -386,7 +386,7 @@
                             <li class="inputs__item">
                                 <label for="" class="inputs__label">
                                   <div class="inputs__text">Серия, номер</div>
-                                  <input type="text" class="inputs__input">
+                                  <input type="text" class="inputs__input tel">
                                   <div class="inputs__hint"></div>
                                 </label>
                                 </li>
@@ -408,7 +408,9 @@
                               <label for="" class="inputs__label">
                                 <div class="inputs__text">Загрузить скан паспорта</div>
                                   <div class="inputs__wrapper">
-                                    <input placeholder="перетащите файл сюда или нажмите +" type="text" class="inputs__input">
+                                    <div placeholder="перетащите файл сюда или нажмите +" class="inputs__input inputs__input--fake">
+                                    </div>
+                                    <input type="file" class="inputs__file">
                                     <a href="#" class="inputs__download">
                                       <img src="images/content/plus.svg" alt="plus" class="inputs__download-icon">
                                     </a>
@@ -514,14 +516,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="panel panel--web-info web-info">
+                  <div class="panel panel--web-info tariff">
                       <a href="#" class="panel__close-link">
                         <svg class="panel__close-icon">
                           <use xlink:href="images/sprite.svg#panel-close"></use>
                         </svg>
                       </a>
                       <div class="panel__title">
-                          <div class="panel__title-text">Информация о вебинаре</div>
+                          <div class="panel__title-text">Тарифный план</div>
                           <a href="#" class="panel__hint-link">
                             <svg class="panel__hint-icon">
                               <use xlink:href="images/sprite.svg#question"></use>
@@ -533,11 +535,8 @@
                         </div>
                       <div class="panel__content tariff__content">
                         <div class="tariff__title title">Ваш тарифный план: ЛАЙТ</div>
-                        <div class="web-info__types info-types">
-                          <a href="#" class="info-types__type info-types__type--is-active info-types__type--online">онлайн</a>
-                          <a href="#" class="info-types__type info-types__type--record">в записи</a>
-                        </div>
-                        <div class="acc-info__input-area input-area">
+                        <button class="tariff__btn">Сменить тариф</button>
+                        <div class="tariff__input-area input-area">
                             <div class="input-area__title">Персональные данные</div>
                             <ul class="input-area__inputs inputs">
                               <li class="inputs__item">
@@ -563,6 +562,40 @@
                                   </li>
                             </ul>
                           </div>
+                      </div>
+                    </div>
+                    <div class="panel panel--web-info web-info">
+                        <a href="#" class="panel__close-link">
+                          <svg class="panel__close-icon">
+                            <use xlink:href="images/sprite.svg#panel-close"></use>
+                          </svg>
+                        </a>
+                        <div class="panel__title">
+                            <div class="panel__title-text">Информация о вебинаре</div>
+                            <a href="#" class="panel__hint-link">
+                              <svg class="panel__hint-icon">
+                                <use xlink:href="images/sprite.svg#question"></use>
+                              </svg>
+                            </a>
+                            <div class="popup-panel">
+                                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ручеек сих продолжил семантика курсивных великий все текст взобравшись от всех!
+                              </div>
+                          </div>
+                        <div class="panel__content web-info__content">
+                          <div class="tariff__title title">Ваш тарифный план: ЛАЙТ</div>
+                          <div class="web-info__types info-types">
+                            <a href="#" class="info-types__type info-types__type--is-active info-types__type--online">онлайн</a>
+                            <a href="#" class="info-types__type info-types__type--record">в записи</a>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    <div class="panel panel--add-new add-new">
+                      <div class="panel__content add-new__content">
+                        <a href="#" class="add-new__link">
+                          <div class="add-new__text">Добавить информационный блок</div>
+                          <img src="images/content/plus-small.svg" class="add-new__plus">
+                        </a>
                       </div>
                     </div>
               </div>
