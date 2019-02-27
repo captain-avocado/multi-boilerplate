@@ -16,6 +16,7 @@
   align-items: center;
   font-size: 14px;
   border-radius: 15px;
+  cursor: pointer;
   @include phones {
     font-size: 12px;
     width: 77px;

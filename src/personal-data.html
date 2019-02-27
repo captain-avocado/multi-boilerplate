@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+          <div class="header__right">
+            <div class="header__logo">
+              <a href="#"  class="logo">
+                <img class="logo__img" src="images/content/logo.svg" alt="logo">
+              </a>
+            </div>
+            <a href="./" class="header__text">Личный кабинет</a>
+          </div>
+          <div class="header__left">
+            <div class="header__menus">
+                <ul class="header__menu menu">   
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="about">
+                        О конструкторе
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="support">
+                        Помощь
+                      </a>
+                    </li>
+                  </ul>
+              <div class="header__lang lang">
+                <a href="#" class="lang__link">
+                  <div class="lang__text" id="lang">Русский</div>
+                  <svg class="lang__angle">
+                    <use xlink:href="images/sprite.svg#angle"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="header__info">
+              <a href="#" class="header__personal">
+                <div class="header__avatar"></div>
+                <div class="header__personal-text">
+                  <div class="name">Лариса</div>
+                  <div class="surname">Котенко</div>
+                </div>
+              </a>
+            </div>
+          </div>
+    </header>
+    <main class="main">
+      <div class="main__content">
+        <div class="content web-create">
+          <div class="web-create__header">
+            <div class="web-create__title">Создайте свой первый вебинар и начинайте зарабатывать уже сегодня!</div>
+            <ul class="web-create__steps create-steps">
+              <li class="create-steps__item create-steps__item--is-active">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Личные данные</div>
+                <div class="create-steps__num">1</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">О вебинаре</div>
+                <div class="create-steps__num">2</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Платежные данные</div>
+                <div class="create-steps__num">3</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Финишная прямая</div>
+                <div class="create-steps__num">4</div>
+              </li>
+            </ul>
+          </div>
+          <div class="web-create__inputs">
+            <div class="web-create__inputs-wrapper">
+                <div class="web-create__inputs-title">Расскажите о себе</div>
+                <div class="panel panel--web-create web-create__inputs-area">
+                  <div class="web-create__info-types info-types">
+                    <div class="info-types__type info-types__type--is-active">Физ. лицо</div>
+                    <div class="info-types__type info-types__type--ip">ИП</div>
+                    <div class="info-types__type info-types__type--entity">Юр. лицо</div>
+                  </div>
+                  <ul class="inputs first-info">
+                    <li class="inputs__item default">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Фамилия</div>
+                        <input type="text" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item default">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Имя</div>
+                        <input type="text" class="inputs__input tel">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item default">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Отчество</div>
+                        <input type="text" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>          
+                  </ul>
+                </div>
+                <div class="panel default panel--web-create">
+                  <ul class="inputs">
+                    <li class="inputs__item">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Телефон</div>
+                        <input type="text" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">E-mail</div>
+                        <input type="text" class="inputs__input tel">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Город, страна</div>
+                        <input type="text" placeholder="например, Москва, Россия" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Дата рождения</div>
+                        <input type="text" placeholder="дд.мм.гг" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>
+                    <li class="inputs__item">
+                      <label for="" class="inputs__label">
+                        <div class="inputs__text">Профессиональные интересы</div>
+                        <input type="text" placeholder="например, психология, психоанализ" class="inputs__input">
+                        <div class="inputs__hint"></div>
+                      </label>
+                    </li>        
+                  </ul>
+                </div>
+                <!-- <div class="panel add-entity panel--web-create">
+                    <ul class="inputs">
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Юридический адрес</div>
+                          <input type="text" placeholder="например, Москва, Россия" class="inputs__input inputs__input--addr">
+                          <input type="text" placeholder="например, Невский пр., дом 1, кв. 1" class="inputs__input">
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Фактический адрес</div>
+                          <label class="inputs__match">
+                            <div class="inputs__match-text">Совпадает с юридическим</div>
+                            <input type="checkbox" class="inputs__match-check">
+                            <div class="inputs__match-fake"></div>
+                          </label>
+                          <input type="text" placeholder="например, Москва, Россия" class="inputs__input inputs__input--addr">
+                          <input type="text" placeholder="например, Невский пр., дом 1, кв. 1" class="inputs__input">
+                        </label>
+                      </li>
+                    </ul>
+                  </div> -->
+                <div class="panel panel--web-create panel--next">
+                  <a href="#" class="web-create__next-step">
+                    Далее
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.web-create {
+  
+  &__header {
+    margin-bottom: 75px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #343442;
+    text-align: center;
+    margin: 23px 0;
+  }
+
+  &__inputs-title {
+    margin-bottom: 20px;
+  }
+
+  &__info-types {
+    margin: 8px 0 50px;
+    width: 100%;
+    & div {
+      flex: 1;
+    }
+  }
+
+  &__next-step {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: $purple;
+  }
+}

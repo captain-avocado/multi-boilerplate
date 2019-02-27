@@ -19,6 +19,10 @@
     }  
   }
 
+  &--web-create {
+    width: 460px;
+  }
+
   &--visits {
     @include phones {
       padding: 15px 12px 0;

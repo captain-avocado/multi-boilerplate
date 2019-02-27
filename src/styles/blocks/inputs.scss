@@ -22,6 +22,14 @@
 
     &--fake {
       height: 38.6px;
+      color: rgba(#5e5e7b, .5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--addr {
+      margin-bottom: 25px;
     }
 
     &::placeholder {
@@ -77,5 +85,51 @@
   &__download-icon {
     width: 25px;
     height: 25px;
+  }
+
+  &__match {
+    font-size: 12px;
+    color: #5E5E7B;
+    padding-left: 15px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+  }
+
+  &__match-check {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__match-check:checked + &__match-fake:after {
+    opacity: 1;
+  }
+
+  &__match-fake {
+    width: 15px;
+    height: 15px;
+    border: 2.04546px solid #5E5E7B;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transform-origin: 50% 50%;
+      width: 4px;
+      height: 7px;
+      border-right: 2px solid #5E5E7B;
+      border-bottom: 2px solid #5E5E7B;
+      opacity: 0;
+    }
   }
 }
