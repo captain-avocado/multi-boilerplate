@@ -1,7 +1,5 @@
-import { first } from "rxjs/operator/first";
-
 export default function inputs() {
-  const infoTypes = document.querySelector('.web-create__info-types');
+  const infoTypes = document.querySelector('.info-types--legal');
   if (infoTypes === null) return;
 
   function createInput(label, className) {
@@ -105,6 +103,7 @@ export default function inputs() {
   function createEntityDefaultPanel() {
     const panel = document.createElement('div');
     panel.classList.add('panel');
+    panel.classList.add('panel--web-create');
     panel.classList.add('add-entity');
     panel.innerHTML = `<ul class="inputs">
       <li class="inputs__item">

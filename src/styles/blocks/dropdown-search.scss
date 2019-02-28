@@ -1,0 +1,57 @@
+.dropdown-search {
+  background: #F2F2F8;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 14px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: opacity .2s, visibility .2s;
+
+  &__list {
+    max-height: 180px;
+  }
+
+  &--is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__word {
+    padding-left: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-bottom: 13px;
+  }
+
+  &__icon-active {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
+
+    &--is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

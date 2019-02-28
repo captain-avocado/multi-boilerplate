@@ -1,0 +1,19 @@
+.active-items {
+  &__item {
+    
+    &:first-child {
+      margin-top: 15px;
+    }
+
+    background: #F2F2F8;
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__icon-remove {
+    cursor: pointer;
+  }
+}

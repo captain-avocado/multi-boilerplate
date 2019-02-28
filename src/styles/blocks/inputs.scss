@@ -1,13 +1,22 @@
 .inputs {
 
   &__item {
-    margin-bottom: 25px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
   }
 
   &__text {
     font-size: 14px;
     margin-left: 15px;
     margin-bottom: 10px;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__input {
@@ -131,5 +140,16 @@
       border-bottom: 2px solid #5E5E7B;
       opacity: 0;
     }
+  }
+
+  &__dropdown-open {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
