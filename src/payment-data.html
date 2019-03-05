@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+          <div class="header__right">
+            <div class="header__logo">
+              <a href="#"  class="logo">
+                <img class="logo__img" src="images/content/logo.svg" alt="logo">
+              </a>
+            </div>
+            <a href="./" class="header__text">Личный кабинет</a>
+          </div>
+          <div class="header__left">
+            <div class="header__menus">
+                <ul class="header__menu menu">   
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="about">
+                        О конструкторе
+                      </a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__link" id="support">
+                        Помощь
+                      </a>
+                    </li>
+                  </ul>
+              <div class="header__lang lang">
+                <a href="#" class="lang__link">
+                  <div class="lang__text" id="lang">Русский</div>
+                  <svg class="lang__angle">
+                    <use xlink:href="images/sprite.svg#angle"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="header__info">
+              <a href="#" class="header__personal">
+                <div class="header__avatar"></div>
+                <div class="header__personal-text">
+                  <div class="name">Лариса</div>
+                  <div class="surname">Котенко</div>
+                </div>
+              </a>
+            </div>
+          </div>
+    </header>
+    <main class="main">
+      <div class="main__content">
+        <div class="content web-create">
+          <div class="web-create__header">
+            <div class="web-create__title">Создайте свой первый вебинар и начинайте зарабатывать уже сегодня!</div>
+            <ul class="web-create__steps create-steps">
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Личные данные</div>
+                <div class="create-steps__num">1</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">О вебинаре</div>
+                <div class="create-steps__num">2</div>
+              </li>
+              <li class="create-steps__item create-steps__item--is-active">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Платежные данные</div>
+                <div class="create-steps__num">3</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Финишная прямая</div>
+                <div class="create-steps__num">4</div>
+              </li>
+            </ul>
+          </div>
+          <div class="web-create__inputs payment">
+            <div class="web-create__inputs-wrapper">
+                <div class="web-create__inputs-title">Подключение оплаты вебинаров</div>
+                <div class="panel panel--first panel--web-create web-create__inputs-area">
+                  <div class="info-types payment__info-types info-types--payment">
+                    <input type="checkbox" class="info-types__checkbox">
+                    <div class="info-types__type info-types__type--payment info-types__type--need info-types__type--is-active">Требуется</div>
+                    <div class="info-types__type info-types__type--payment info-types__type--not-need">Не требуется</div>
+                  </div>
+                  <div class="input-area__title">Паспортные данные</div>
+                  <ul class="input-area__inputs inputs">
+                          <li class="inputs__item">
+                            <label for="" class="inputs__label">
+                              <div class="inputs__text">ФИО</div>
+                              <input type="text" class="inputs__input">
+                              <div class="inputs__hint"></div>
+                            </label>
+                            </li>
+                            <li class="inputs__item">
+                                <label for="" class="inputs__label">
+                                  <div class="inputs__text">Серия, номер</div>
+                                  <input type="text" class="inputs__input tel">
+                                  <div class="inputs__hint"></div>
+                                </label>
+                                </li>
+                                <li class="inputs__item">
+                                    <label for="" class="inputs__label">
+                                      <div class="inputs__text">Кем и когда выдан</div>
+                                      <input placeholder="например, 1ОМ Центрального района ...," type="text" class="inputs__input">
+                                      <div class="inputs__hint"></div>
+                                    </label>
+                                    </li>
+                                    <li class="inputs__item">
+                                        <label for="" class="inputs__label">
+                                          <div class="inputs__text">Адрес регистрации</div>
+                                          <input placeholder="например, Невский пр., дом 1, кв. 1" type="text" class="inputs__input inputs__input--addr-reg">
+                                          <div class="inputs__hint"></div>
+                                        </label>
+                                    </li>
+                                    <li class="inputs__item inputs__item--addr-fact">
+                                        <label for="" class="inputs__label">
+                                          <div class="inputs__text">Адрес фактического проживания</div>
+                                          <input placeholder="например, Невский пр., дом 1, кв. 1" type="text" class="inputs__input inputs__input--addr-fact">
+                                          <div class="inputs__hint"></div>
+                                        </label>
+                                    </li>
+                                    <li class="inputs__item">
+                                      <label class="inputs__match">
+                                        <div class="inputs__match-text">Совпадает с адресом регистрации</div>
+                                        <input type="checkbox" class="inputs__match-check inputs__match--addr-reg">
+                                        <div class="inputs__match-fake"></div>
+                                      </label>
+                                    </li>              
+                            <li class="inputs__item">
+                              <label for="" class="inputs__label">
+                                <div class="inputs__text">Загрузить скан паспорта</div>
+                                  <div class="inputs__wrapper">
+                                    <div class="inputs__input inputs__input--fake">
+                                      перетащите файл сюда или нажмите + 
+                                    </div>
+                                    <input type="file" class="inputs__file">
+                                    <a href="#" class="inputs__download">
+                                      <img src="images/content/plus.svg" alt="plus" class="inputs__download-icon">
+                                    </a>
+                                  </div>
+                                  <div class="inputs__hint inputs__hint--last">можно загружать файлы с разрешением JPG, PNG, PDF размер не более 5 Мб</div>
+                              </label>
+                          </li>
+                  </ul>
+                </div>
+                <div class="panel panel--middle panel--web-create web-create__inputs-area">
+                    <div class="input-area__title">Банковские данные</div>
+                          <ul class="input-area__inputs inputs">
+                            <li class="inputs__item">
+                              <label for="" class="inputs__label">
+                                <div class="inputs__text">ФИО</div>
+                                <input type="text" class="inputs__input">
+                              </label>
+                              </li>
+                              <li class="inputs__item">
+                                  <label for="" class="inputs__label">
+                                    <div class="inputs__text">Номер счета</div>
+                                    <input type="text" class="inputs__input">
+                                  </label>
+                                  </li>
+                                  <li class="inputs__item">
+                                      <label for="" class="inputs__label">
+                                        <div class="inputs__text">Название банка</div>
+                                        <input placeholder="например, Сбербанк" type="text" class="inputs__input">
+                                      </label>
+                                      </li>
+                                      <li class="inputs__item">
+                                          <label for="" class="inputs__label">
+                                            <div class="inputs__text">БИК</div>
+                                            <input type="text" class="inputs__input inputs__input--addr-reg">
+                                          </label>
+                                      </li>
+                                      <li class="inputs__item inputs__item--addr-fact">
+                                          <label for="" class="inputs__label">
+                                            <div class="inputs__text">Корреспондентский счет</div>
+                                            <input type="text" class="inputs__input inputs__input--addr-fact">
+                                          </label>
+                                      </li>
+                          </ul>
+                </div>
+                <div class="panel panel--middle panel--web-create web-create__inputs-area">
+                  <div class="input-area__title">Прием платежей</div>
+                  <ul class="pay-logos">
+                    <li class="pay-logos__item">
+                      <label for="pay-way1" class="pay-logos__label">
+                        <div class="pay-logos__input">
+                          <input type="radio" name="pay-way" id="pay-way1" checked class="pay-logos__check">
+                          <div class="pay-logos__checkbox-fake"></div>
+                          <div class="pay-logos__text">Банковские карты</div>
+                        </div>
+                        <div class="pay-logos__logos">
+                          <img src="images/content/visa.svg" alt="visa" class="pay-logos__logo">
+                          <img src="images/content/mastercard.svg" alt="mastercard" class="pay-logos__logo">
+                          <img src="images/content/mir.svg" alt="mir" class="pay-logos__logo">
+                        </div>
+                      </label>
+                    </li>
+                    <li class="pay-logos__item">
+                      <label for="pay-way2" class="pay-logos__label">
+                        <div class="pay-logos__input">
+                          <input type="radio" name="pay-way" id="pay-way2" class="pay-logos__check">
+                          <div class="pay-logos__checkbox-fake"></div>
+                          <div class="pay-logos__text">Платежные терминалы</div>
+                        </div>
+                        <div class="pay-logos__logos">
+                            <img src="images/content/qiwi.svg" alt="qiwi" class="pay-logos__logo">
+                            <img src="images/content/pskb.svg" alt="pskb" class="pay-logos__logo">
+                        </div>
+                      </label>
+                    </li>
+                    <li class="pay-logos__item pay-logos__item--is-active">
+                        <label for="pay-way3" class="pay-logos__label">
+                          <div class="pay-logos__input">
+                            <input type="radio" name="pay-way" id="pay-way3" class="pay-logos__check">
+                            <div class="pay-logos__checkbox-fake"></div>
+                            <div class="pay-logos__text">Мобильные кошельки</div>
+                          </div>
+                          <div class="pay-logos__logos">
+                              <img src="images/content/yd.svg" alt="yd" class="pay-logos__logo">
+                              <img src="images/content/qiwi.svg" alt="qiwi" class="pay-logos__logo">
+                          </div>
+                        </label>
+                      </li>
+                  </ul>
+                </div>
+                <div class="web-create__step-panels">
+                    <div class="panel panel--web-create panel--step panel--prev">
+                        <a href="personal-data.html" class="web-create__step">
+                          Назад
+                        </a>
+                      </div>
+                      <div class="panel panel--web-create panel--step panel--next">
+                          <a href="#" class="web-create__step">
+                            Далее
+                          </a>
+                        </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>

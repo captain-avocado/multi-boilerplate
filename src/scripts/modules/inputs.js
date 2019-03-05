@@ -41,7 +41,7 @@ export default function inputs() {
   }
 
   const wrapper = document.querySelector('.web-create__inputs-wrapper');
-  const next = document.querySelector('.panel--next');
+  const next = document.querySelector('.web-create__step-panels');
   const firstPanel = document.querySelector('.first-info');
 
   function removeToIndivid(className) {

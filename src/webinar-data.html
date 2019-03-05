@@ -93,44 +93,44 @@
                         <div class="inputs__hint"></div>
                       </label>
                     </li>
-                    <li class="inputs__item">
+                    <li class="inputs__item select-input">
                       <label for="" class="inputs__label">
                         <div class="inputs__text">Выберите направление</div>
-                        <input type="text" placeholder="например, психология" class="inputs__input inputs__input--search">
-                        <div class="inputs__hint"></div>
-                        <a href="#" class="inputs__dropdown-open">
-                          <img src="images/content/angle-search.svg" alt="open-dropdown" class="inputs__dropdown-icon">
-                        </a>
                         <div class="dropdown-search">
                             <div class="dropdown-search__wrapper">
                               <ul class="dropdown-search__list">
                                 <li class="dropdown-search__item">
                                   <div class="dropdown-search__title">Психология и психоанализ</div>
-                                  <div class="dropdown-search__word" data-item="psycho1">психология
+                                  <div class="dropdown-search__word" data-item="psycho1"  data-type="theme">психология
                                     <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                   </div>
-                                  <div class="dropdown-search__word" data-item="psycho2">психоанализ
+                                  <div class="dropdown-search__word" data-item="psycho2" data-type="theme">психоанализ
                                     <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                   </div>
-                                  <div class="dropdown-search__word" data-item="psycho3">детская психология
+                                  <div class="dropdown-search__word" data-item="psycho3" data-type="theme">детская психология
                                     <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                   </div>
                                 </li>
                                 <li class="dropdown-search__item">
                                     <div class="dropdown-search__title">Психология и психоанализ</div>
-                                    <div class="dropdown-search__word" data-item="psycho4">психология
+                                    <div class="dropdown-search__word" data-item="psycho4" data-type="theme">психология
                                       <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                     </div>
-                                    <div class="dropdown-search__word" data-item="psycho5">психоанализ
+                                    <div class="dropdown-search__word" data-item="psycho5" data-type="theme">психоанализ
                                       <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                     </div>
-                                    <div class="dropdown-search__word" data-item="psycho6">детская психология
+                                    <div class="dropdown-search__word" data-item="psycho6" data-type="theme">детская психология
                                       <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
                                     </div>
                                   </li>
                               </ul>
                             </div>
-                          </div>
+                        </div>
+                        <input type="text" placeholder="например, психология" class="inputs__input select-input__input inputs__input--search">
+                        <a href="#" class="inputs__dropdown-open select-input__dropdown-open">
+                          <img src="images/content/angle-search.svg" alt="open-dropdown" class="inputs__dropdown-icon inputs__dropdown-icon--select select-input__dropdown-icon select-input__dropdown-icon--select">
+                        </a>
+                        
                       </label>
                       
 
@@ -140,49 +140,356 @@
                     </li>        
                   </ul>
                 </div>
-                <div class="panel default panel--web-create">
-                  <ul class="inputs">
-                    <li class="inputs__item">
-                      <label for="" class="inputs__label">
-                        <div class="inputs__text">Телефон</div>
-                        <input type="text" class="inputs__input">
-                        <div class="inputs__hint"></div>
-                      </label>
-                    </li>
-                    <li class="inputs__item">
-                      <label for="" class="inputs__label">
-                        <div class="inputs__text">E-mail</div>
-                        <input type="text" class="inputs__input tel">
-                        <div class="inputs__hint"></div>
-                      </label>
-                    </li>
-                    <li class="inputs__item">
-                      <label for="" class="inputs__label">
-                        <div class="inputs__text">Город, страна</div>
-                        <input type="text" placeholder="например, Москва, Россия" class="inputs__input">
-                        <div class="inputs__hint"></div>
-                      </label>
-                    </li>
-                    <li class="inputs__item">
-                      <label for="" class="inputs__label">
-                        <div class="inputs__text">Дата рождения</div>
-                        <input type="text" placeholder="дд.мм.гг" class="inputs__input">
-                        <div class="inputs__hint"></div>
-                      </label>
-                    </li>
-                    <li class="inputs__item">
-                      <label for="" class="inputs__label">
-                        <div class="inputs__text">Профессиональные интересы</div>
-                        <input type="text" placeholder="например, психология, психоанализ" class="inputs__input">
-                        <div class="inputs__hint"></div>
-                      </label>
-                    </li>        
-                  </ul>
+                <div class="panel panel--web-create web-create__inputs-area">
+                    <ul class="inputs">
+                      <li class="inputs__item select-input">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Ведущие</div>
+                          <div class="inputs__hint inputs__hint--lead">Ведущий должен быть зарегистрирован на сайте, как пользователь. Также их можно добавить позже в Личном кабинете во вкладке “Вебинар”</div>
+                          <div class="dropdown-search">
+                            <div class="dropdown-search__wrapper">
+                              <ul class="dropdown-search__list">
+                                <li class="dropdown-search__item dropdown-search__item--lead">
+                                  <div class="dropdown-search__avatar"></div>
+                                  <div class="dropdown-search__word" data-item="author1" data-type="lead">Котенко Анна Дмитриевна
+                                    <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                  </div>
+                                </li>
+                                <li class="dropdown-search__item dropdown-search__item--lead">
+                                  <div class="dropdown-search__avatar"></div>
+                                  <div class="dropdown-search__word" data-item="author2" data-type="lead">Котенко Инна Дмитриевна
+                                    <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                  </div>
+                                </li>
+                                <li class="dropdown-search__item dropdown-search__item--lead">
+                                  <div class="dropdown-search__avatar"></div>
+                                  <div class="dropdown-search__word" data-item="author3" data-type="lead">Котенко Ольга Дмитриевна
+                                    <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                  </div>
+                                </li>
+                                <li class="dropdown-search__item dropdown-search__item--lead">
+                                    <div class="dropdown-search__avatar"></div>
+                                    <div class="dropdown-search__word" data-item="author4" data-type="lead">Котенко Иван Дмитриевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                    </div>
+                                  </li> 
+                                  <li class="dropdown-search__item dropdown-search__item--lead">
+                                      <div class="dropdown-search__avatar"></div>
+                                      <div class="dropdown-search__word" data-item="author5" data-type="lead">Котенко Алла Дмитриевна
+                                        <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                      </div>
+                                    </li> 
+                                    <li class="dropdown-search__item dropdown-search__item--lead">
+                                        <div class="dropdown-search__avatar"></div>
+                                        <div class="dropdown-search__word" data-item="author6" data-type="lead">Котенко Оксана Дмитриевна
+                                          <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                        </div>
+                                      </li>                                      
+                              </ul>
+                            </div>
+                          </div>
+                          <input type="text" placeholder="поиск по базе ведущих Webiray.com" class="inputs__input select-input__input inputs__input--search">
+                          <a href="#" class="inputs__dropdown-open select-input__dropdown-open">
+                            <img src="images/content/search.svg" alt="open-dropdown" class="inputs__dropdown-icon select-input__dropdown-icon">
+                          </a>
+                          
+                        </label>
+                        
+  
+                        <ul class="active-items">
+                        </ul>
+
+                        <!-- <div class="select-input">
+                            <div class="dropdown-search">
+                                <div class="dropdown-search__wrapper">
+                                  <ul class="dropdown-search__list">
+                                    <li class="dropdown-search__item dropdown-search__item--lead">
+                                      <div class="dropdown-search__word" data-item="author1" data-type="lead">Ответы на вопросы по теории
+                                        <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                      </div>
+                                    </li>
+                                    <li class="dropdown-search__item dropdown-search__item--lead">
+                                      <div class="dropdown-search__word" data-item="author2" data-type="lead">Ответы на вопросы по теории
+                                        <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                      </div>
+                                    </li>
+                                    <li class="dropdown-search__item dropdown-search__item--lead">
+                                      <div class="dropdown-search__word" data-item="author3" data-type="lead">Ответы на вопросы по теории
+                                        <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                      </div>
+                                    </li>
+                                    <li class="dropdown-search__item dropdown-search__item--lead">
+                                        <div class="dropdown-search__word" data-item="author4" data-type="lead">Ответы на вопросы по теории
+                                          <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                        </div>
+                                      </li> 
+                                      <li class="dropdown-search__item dropdown-search__item--lead">
+                                          <div class="dropdown-search__word" data-item="author5" data-type="lead">Ответы на вопросы по теории
+                                            <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                          </div>
+                                        </li> 
+                                        <li class="dropdown-search__item dropdown-search__item--lead">
+                                            <div class="dropdown-search__word" data-item="author6" data-type="lead">Ответы на вопросы по теории
+                                              <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-search__icon-active">
+                                            </div>
+                                          </li>                                      
+                                  </ul>
+                                </div>
+                            </div>
+                          <input type="text" class="select-input__input">
+                          <a href="#" class="select-input__dropdown-open">
+                            <img src="images/content/angle-search.svg" alt="open-dropdown" class="select-input__dropdown-icon">
+                          </a>
+                        </div> -->
+                      </li>        
+                    </ul>
                 </div>
-                <div class="panel panel--web-create panel--next">
-                  <a href="#" class="web-create__next-step">
-                    Далее
-                  </a>
+                <div class="panel panel--web-create web-create__inputs-area date-panel">
+                  <div class="date-panel__title">Дата и время проведения</div>
+                  <div class="date-panel__types-row">
+                    <div class="date-panel__types-text">По времени</div>
+                    <div class="info-types info-types--time">
+                      <div class="info-types__type info-types__type--time info-types__type--limited">Ограничен</div>
+                      <div class="info-types__type info-types__type--time info-types__type--not-limited info-types__type--is-active">Не ограничен</div>
+                    </div>
+                  </div>
+                  <div class="date-panel__date">
+                    <div class="date-panel__subtitle">Выберите дату начала и конца вебинара</div>
+                    <div class="date-panel__calendar calendar">
+                        <div class="calendar__header">
+                            <a href="#" class="calendar__control calendar__control--prev">
+                              <img class="calendar__angle" src="images/content/angle-left.svg">
+                            </a>
+                            <div class="calendar__month">Февраль 2019</div>
+                            <a href="#" class="calendar__control--prev calendar__control--next">
+                              <img class="calendar__angle" src="images/content/angle-right.svg">
+                            </a>
+                          </div>
+                          <table class="calendar__table">
+                            <tr class="calendar__row calendar__row--week">
+                              <th class="calendar__cell calendar__cell--week">пн</th>
+                              <th class="calendar__cell calendar__cell--week">вт</th>
+                              <th class="calendar__cell calendar__cell--week">ср</th>
+                              <th class="calendar__cell calendar__cell--week">чт</th>
+                              <th class="calendar__cell calendar__cell--week">пт</th>
+                              <th class="calendar__cell calendar__cell--week">сб</th>
+                              <th class="calendar__cell calendar__cell--week">вс</th>
+                            </tr>
+                            <tr class="calendar__row">
+                                <td class="calendar__cell calendar__cell--out">
+                                    <div class="calendar__cell-content">
+                                      30
+                                    </div>
+                                </td>
+                              
+                                <td class="calendar__cell calendar__cell--out">
+                                  <div class="calendar__cell-content">
+                                    31
+                                  </div>
+                              </td>
+                            
+                              <td class="calendar__cell calendar__cell--saved">
+                                <div class="calendar__cell-content">
+                                  1
+                                </div>
+                                <div class="popup-panel popup-panel--calendar">
+                                    24.11.2018 Психоанализ
+                                  </div>
+                              </td>
+                              <td class="calendar__cell calendar__cell--saved">
+                                  <div class="calendar__cell-content">
+                                    2
+                                  </div>
+                                  <div class="popup-panel popup-panel--calendar">
+                                      24.11.2018 Психоанализ
+                                    </div>
+                                </td>
+                                <td class="calendar__cell calendar__cell--highlighted calendar__cell--hl-first">
+                                    <div class="calendar__cell-content">
+                                      3
+                                    </div>
+                                </td>
+                                <td class="calendar__cell calendar__cell--highlighted">
+                                    <div class="calendar__cell-content">
+                                      4
+                                    </div>
+                                </td>
+                                <td class="calendar__cell calendar__cell--highlighted calendar__cell--today">
+                                    <div class="calendar__cell-content">
+                                      <div class="calendar__text-wrap">
+                                        5
+                                      </div>
+                                    </div>
+                                </td>
+                              </tr>
+                            <tr class="calendar__row">
+                              <td class="calendar__cell calendar__cell--highlighted">
+                                <div class="calendar__cell-content">6</div>
+                              </td>
+                              <td class="calendar__cell calendar__cell--highlighted">
+                                  <div class="calendar__cell-content">6</div>
+                              </td>
+                              <td class="calendar__cell calendar__cell--highlighted calendar__cell--hl-last">
+                                  <div class="calendar__cell-content">8</div>
+                              </td>
+                              <td class="calendar__cell">
+                                  <div class="calendar__cell-content">9</div>
+                              </td>
+                              <td class="calendar__cell">
+                                  <div class="calendar__cell-content">10</div>
+                              </td>
+                              <td class="calendar__cell">
+                                  <div class="calendar__cell-content">11</div>
+                              </td>
+                              <td class="calendar__cell">
+                                  <div class="calendar__cell-content">12</div>
+                              </td>
+                            </tr>
+                            <tr class="calendar__row">
+                              <td class="calendar__cell">
+                                <div class="calendar__content">13</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">14</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">15</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">16</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">17</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">18</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">19</div>
+                              </td>
+                            </tr>
+                            <tr class="calendar__row">
+                              <td class="calendar__cell">
+                                <div class="calendar__content">20</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">21</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">22</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">23</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">24</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">25</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">26</div>
+                              </td>
+                            </tr>
+                            <tr class="calendar__row">
+                              <td class="calendar__cell">
+                                <div class="calendar__content">27</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">28</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">29</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">30</div>
+                              </td>
+                              <td class="calendar__cell">
+                                <div class="calendar__content">31</div>
+                              </td>
+                              <td class="calendar__cell calendar__cell--out">
+                                <div class="calendar__content">1</div>
+                              </td>
+                              <td class="calendar__cell calendar__cell--out">
+                                <div class="calendar__content">2</div>
+                              </td>
+                            </tr>
+                            
+                          </table>
+                    </div>
+                  </div>
+                  <div class="date-panel__time">
+                      <div class="date-panel__subtitle">Выберите время начала и конца вебинара</div>
+                      <div class="date-panel__time-inputs">
+                        <div class="date-panel__time-input time-input time-input--start">
+                          <input type="text" class="time-input__input time-input__input--hours">
+                          <span class="time-input__colon">:</span>
+                          <input type="text" class="time-input__input time-input__input--mins">
+                        </div>
+                        <!-- <div class="time-input time-input--end">
+                            <input type="text" class="time-input__input time-input__input--hours">
+                            <span class="time-input__colon">:</span>
+                            <input type="text" class="time-input__input time-input__input--mins">
+                          </div> -->
+                      </div>
+                    </div>
+                    <div class="date-panel__timezone">
+                      <div class="date-panel__subtitle">Выберите часовой пояс</div>
+                      <div class="date-panel__select-input input-select select-input--timezone">
+                              <div class="dropdown-input">
+                                  <div class="dropdown-input__wrapper">
+                                    <ul class="dropdown-input__list">
+                                      <li class="dropdown-input__item dropdown-search__item--lead">
+                                        <div class="dropdown-input__word" data-item="author1" data-type="lead">GMT +03:00 Москва
+                                          <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                        </div>
+                                      </li>
+                                      <li class="dropdown-input__item dropdown-search__item--lead">
+                                        <div class="dropdown-input__word" data-item="author2" data-type="lead">GMT +03:00 Москва
+                                          <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                        </div>
+                                      </li>
+                                      <li class="dropdown-input__item dropdown-search__item--lead">
+                                        <div class="dropdown-input__word" data-item="author3" data-type="lead">GMT +03:00 Москва
+                                          <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                        </div>
+                                      </li>
+                                      <li class="dropdown-input__item">
+                                          <div class="dropdown-input__word" data-item="author4" data-type="lead">GMT +03:00 Москва
+                                            <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                          </div>
+                                        </li> 
+                                        <li class="dropdown-input__item">
+                                            <div class="dropdown-input__word" data-item="author5" data-type="lead">GMT +03:00 Москва
+                                              <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                            </div>
+                                          </li> 
+                                          <li class="dropdown-input__item dropdown-search__item--lead">
+                                              <div class="dropdown-input__word" data-item="author6" data-type="lead">GMT +03:00 Москва
+                                                <img src="images/content/icon-active.svg" alt="icon-active" class="dropdown-input__icon-active">
+                                              </div>
+                                            </li>                                      
+                                    </ul>
+                                  </div>
+                              </div>
+                            <input type="text" readonly class="input-select__input select-input__input--timezone">
+                            <a href="#" class="input-select__dropdown-open">
+                              <img src="images/content/angle-search.svg" alt="open-dropdown" class="input-select__dropdown-icon">
+                            </a>
+                      </div>  
+                    </div>
+                </div>
+                <div class="web-create__step-panels">
+                    <div class="panel panel--web-create panel--step panel--prev">
+                        <a href="personal-data.html" class="web-create__step">
+                          Назад
+                        </a>
+                      </div>
+                      <div class="panel panel--web-create panel--step panel--next">
+                          <a href="payment-data.html" class="web-create__step">
+                            Далее
+                          </a>
+                        </div>
                 </div>
             </div>
           </div>

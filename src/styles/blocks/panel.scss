@@ -24,10 +24,24 @@
     padding: 33px 25px;
   }
 
+  &--step {
+    padding: 20px;
+    flex: 1;
+    width: auto;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
   &--visits {
     @include phones {
       padding: 15px 12px 0;
     }
+  }
+
+  &--hidden {
+    display: none;
   }
 
   &:hover {

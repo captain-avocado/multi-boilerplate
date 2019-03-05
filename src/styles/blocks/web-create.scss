@@ -29,10 +29,18 @@
     }
   }
 
-  &__next-step {
+  &__step {
     display: flex;
     width: 100%;
     justify-content: center;
-    color: $purple;
+    color: #5E5E7B;
+    transition: color .2s;
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &__step-panels {
+    display: flex;
   }
 }
