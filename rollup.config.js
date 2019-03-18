@@ -7,6 +7,9 @@ const config = require('./gulp/config');
 const rollupConfig = {
   input: config.src.scripts + 'main.js',
   format: 'iife',
+  globals: {
+    jquery: '$',
+  },
   sourcemap: true,
   plugins: [
     resolveNodeModules(),

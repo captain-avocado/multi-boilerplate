@@ -30,11 +30,14 @@
   }
 
   &__step {
+    padding: 20px;
     display: flex;
     width: 100%;
     justify-content: center;
     color: #5E5E7B;
     transition: color .2s;
+    cursor: pointer;
+    font-size: 14px;
     &:hover {
       color: $purple;
     }
@@ -42,5 +45,6 @@
 
   &__step-panels {
     display: flex;
+    width: 460px;
   }
 }

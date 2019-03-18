@@ -7,22 +7,10 @@
   display: flex;
   background-color: #fff;
   transition: background-color .35s;
-
-  &__right, &__left {
-    display: flex;
-    align-items: center;
-  }
-
-  &__right {
-    margin-right: auto;
-
-    @include phones {
-      margin-right: 25px;
-    }
-  }
+  align-items: center;
 
   &__logo {
-    padding: 0 .9375rem;
+    padding: 15px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -35,62 +23,52 @@
     }
   }
 
-  &__info {
-    display: flex;
-  }
-
-  &__menus {
-    display: flex;
-    margin-right: 14vw;
-    @include phones {
-      display: none;
-    }
-  }
-
-  &__lang {
-    padding: 0 20px;
-    border-left: 1px solid #5E5E7B;
-    margin: auto;
-  }
-
-  &__web-num {
-    margin-right: 25px;
-    @include phones {
-      display: none;
-    }
-  }
-
-  &__miss-off {
-    margin-right: 22px;
-    color: $purple;
-    font-size: 14px;
-  }
-
   &__text {
     margin-left: 30px;
     font-size: 18px;
+    margin-right: auto;
 
     @include phones {
       display: none;
     }
   }
   
-  &__personal {
+  &__info {
     display: flex;
-    padding-right: 40px;
     align-items: center;
+    position: relative;
+  }
+
+  &__info-text {
+    color: $purple;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 50px;
+  }
+
+  &__more {
+    cursor: pointer;
+
+    &:hover > .acc-dropdown {
+      cursor: default;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__info-time {
+    margin-bottom: 5px;
+  }
+
+  &__help {
+    margin-right: 70px;
   }
 
   &__avatar {
-    width: 32px;
-    height: 32px;
-    background-color: $purple;
-    border-radius: 50%;
-    margin-right: 9px;
+    width: 45px;
+    height: 45px;
+    margin: 0 20px;
   }
 
-  &__personal-text {
-    font-size: 14px;
-    color: $purple;
-  }
 }

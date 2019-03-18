@@ -4,9 +4,9 @@ import infoTypes from './infoTypes';
 export default function dropdownSearch() {
   //скролл дропдауна
   OverlayScrollbars(document.querySelectorAll('.dropdown-search__list'),{
-    className       : "os-theme-dark",
+    className       : 'os-theme-dark',
     sizeAutoCapable : true,
-    paddingAbsolute : true
+    paddingAbsolute : true,
   });
 
 
@@ -184,7 +184,7 @@ export default function dropdownSearch() {
     icon.addEventListener('click', () => { deselectActiveItem(item); });
     const name = item.querySelector('.active-items__name');
     if (name !== null)
-    name.innerText = itemText;
+      name.innerText = itemText;
     
     return item;
   }

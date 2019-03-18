@@ -7,24 +7,45 @@
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; 
+  width: 220px;
+
+  &--visits, &--web {
+    width: 155px;
+  }
+
+  &--debtors, &--auth {
+    width: 255px;
+  }
+
+  &--admin {
+    width: 100%;
+  }
+
+  &--calendar {
+    // box-sizing: content-box;
+  }
+
+
 
   &__type {
-  padding: 2px 0;
-  width: 110px;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   border-radius: 15px;
   cursor: pointer;
+
   @include phones {
     font-size: 12px;
-    width: 77px;
+    // width: 77px;
   }
 
-  &--all, &--today {
-    width: 75px;
+  &--small {
+    flex: .8;
   }
+
+  
 
     &--is-active {
       background-color: $purple;
@@ -36,5 +57,28 @@
     position: absolute;
     opacity: 0;
     visibility: hidden;
+  }
+
+  &__text {
+    padding: .125rem 0;
+    border-radius: .9375rem;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+
+    &--calendar {
+      padding: 0;
+    }
+  }
+
+  &__radio {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__radio:checked + &__text {
+    background-color: $purple;
+    color: #fff;
   }
 }

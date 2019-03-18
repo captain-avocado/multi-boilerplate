@@ -97,6 +97,14 @@
     transform: translateY(-50%);
   }
 
+  &__more {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__download-icon {
     width: 25px;
     height: 25px;

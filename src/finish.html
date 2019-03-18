@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" class="logo">
+          <img class="logo__img" src="images/content/webiray.svg" alt="logo">
+        </a>
+      </div>
+      <a href="./" class="header__text">Личный кабинет</a>
+      <div class="header__info">
+        <a href="#" class="header__help">Помощь</a>
+        <div class="header__more">
+          <div class="header__avatar avatar" style="background-image: url(images/content/webiray.svg)"></div>
+          <div class="acc-dropdown">
+            <div class="acc-dropdown__info">
+              <a href="#" class="acc-dropdown__avatar avatar" style="background-image: url(images/content/webiray.svg)">
+                <img src="images/content/download.svg" alt="" class="acc-dropdown__download">
+                <input type="file" class="acc-dropdown__input">
+              </a>
+              <div class="acc-dropdown__full-name">Котенко Лариса Батьковна</div>
+            </div>
+            <a href="#" class="acc-dropdown__exit">
+              Выход
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__content">
+        <div class="content web-create">
+          <div class="web-create__header">
+            <div class="web-create__title">Создайте свой первый вебинар и начинайте зарабатывать уже сегодня!</div>
+            <ul class="web-create__steps create-steps">
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Личные данные</div>
+                <div class="create-steps__num">1</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">О вебинаре</div>
+                <div class="create-steps__num">2</div>
+              </li>
+              <li class="create-steps__item">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Платежные данные</div>
+                <div class="create-steps__num">3</div>
+              </li>
+              <li class="create-steps__item  create-steps__item--is-active">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Финишная прямая</div>
+                <div class="create-steps__num">4</div>
+              </li>
+            </ul>
+          </div>
+          <div class="web-create__inputs">
+            <div class="web-create__inputs-wrapper landings">
+              <div class="web-create__inputs-title">Визуальное оформление вебинара</div>
+              <div class="panel panel--first panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__title">Посадочная страница</div>
+                <div class="input-info__text">Мы расширили функционал стандартной посадочной страницы вебинара до
+                  полноценного лендинга, который Вы можете настроить и отредактировать как Ваш личный самостоятельный
+                  сайт.</div>
+                <div class="info-types info-types--land-status input-info__info-types">
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="no-landing" name="landing" value="no">
+                    <div class="info-types__text">
+                      нет
+                    </div>
+                  </label>
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="yes-landing" name="landing" value="yes" checked>
+                    <div class="info-types__text">
+                      есть
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="panel panel--second panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__text">Оформление посадочной страницы может занять некоторое время. Вы сможете
+                  сформировать её и позже в Личном кабинете во вкладке “Вебинар”</div>
+                <div class="info-types info-types--land-time input-info__info-types">
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="later-landing" name="landing-time" value="later">
+                    <div class="info-types__text">
+                      потом
+                    </div>
+                  </label>
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="now-landing" name="landing-time" value="now" checked>
+                    <div class="info-types__text">
+                      сейчас
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="panel panel--third panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__title">Выбрать шаблон страницы</div>
+                <div class="input-info__text">После выбора шаблона Вы будете перенаправлены в конструктор вебинаров
+                </div>
+                <ul class="input-info__inputs inputs">
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__wrapper">
+                        <input type="text" class="inputs__input">
+                        <a href="#" class="inputs__more">
+                          <img src="images/content/land.svg" alt="plus" class="inputs__more-icon">
+                        </a>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <img class="landings__image" src="images/content/bg-land.jpg" alt="">
+              <div class="web-create__step-panels">
+                <div class="panel panel--web-create panel--step panel--prev">
+                  <a href="personal-data.html" class="web-create__step">
+                    Назад
+                  </a>
+                </div>
+                <div class="panel panel--web-create panel--step panel--next">
+                  <a href="#" class="web-create__step web-create__step--pay-next">
+                    Далее
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="popup popup--webiray">
+        <div class="popup__content popup__content--subscribe">
+          <a href="#" class="popup__close popup__close--subscribe">
+            <img src="images/content/cross-popup.svg" class="popup__icon popup__icon-close">
+          </a>
+          <div class="popup__container">
+              <div class="popup__title popup__title--subscribe">
+                <div class="popup__title--big">совсем скоро новенькое</div>
+                <div class="popup__title--big">будет опубликовано</div>
+              </div>
+              <form class="popup__form" id="webiray-subscribe">
+                <div class="popup__input-wrap">
+                  <div class="popup__input-text">Хотите быть среди первых, кто узнает об обновления сервиса? Мы сообщим!</div>
+                  <input id="subscribe" type="text" class="popup__input">
+                </div>
+                <button type="submit" id="subscribe-btn" class="popup__btn popup__btn--reg-confirm">Держите меня в курсе</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    <div class="popup popup--webinar">
+      <div class="popup__content popup__content--landings">
+          <a href="#" class="popup__close">
+              <img src="images/content/cross-popup.svg" class="popup__icon popup__icon-close">
+            </a>
+        <div class="popup__title">Варианты шаблонов</div>
+        <div class="popup__info-types info-types">
+          <label class="info-types__type">
+            <input type="radio" class="info-types__radio" id="pay-landings" name="landing-types" value="pay" checked>
+            <div class="info-types__text">
+              бесплатные
+            </div>
+          </label>
+          <label class="info-types__type">
+            <input type="radio" readonly class="info-types__radio" id="free-landings" name="landing-types" value="free">
+            <div class="info-types__text subscribe">
+              платные
+            </div>
+          </label>
+        </div>
+        <div class="popup__text">После выбора шаблона Вы будете переведены на страницу конструктора для редактирования
+          контента</div>
+        <div class="popup__landings">
+          <ul class="popup__landing-list">
+              <li class="popup__landing-item">
+                  <div class="landing">
+                      <div class="landing__info">Больше текста</div>
+                    <div class="landing__block">
+                      <div class="landing__img"  style="background-image: url(images/content/bg1.jpg);"></div>
+                      <div class="landing__descr">
+                        <div class="landing__name">Психология</div>
+                        <div class="landing__icons">
+                          <a href="#" class="landing__view">
+                            <svg class="landing__icon">
+                              <use xlink:href="images/sprite.svg#view"></use>
+                            </svg>
+                          </a>
+                          <a href="#" class="landing__check">
+                            <svg class="landing__icon">
+                              <use xlink:href="images/sprite.svg#check"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+            <li class="popup__landing-item">
+                <div class="landing">
+                    <div class="landing__info">Больше изображений</div>
+                  <div class="landing__block">
+                    <div class="landing__img"  style="background-image: url(images/content/bg2.jpg);"></div>
+                    <div class="landing__descr">
+                      <div class="landing__name">Арт-студия</div>
+                      <div class="landing__icons">
+                        <a href="#" class="landing__view">
+                          <svg class="landing__icon">
+                            <use xlink:href="images/sprite.svg#view"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="landing__check">
+                          <svg class="landing__icon">
+                            <use xlink:href="images/sprite.svg#check"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+        <a href="#" class="popup__more subscribe">Посмотреть еще...</a>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

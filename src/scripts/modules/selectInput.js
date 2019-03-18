@@ -3,11 +3,11 @@ export default function selectInput() {
   // console.log(selectInputs);
   if (selectInputs === null) return;
 
-   //скролл дропдауна
-   OverlayScrollbars(document.querySelectorAll('.dropdown-input__list'),{
-    className       : "os-theme-dark",
+  //скролл дропдауна
+  OverlayScrollbars(document.querySelectorAll('.dropdown-input__list'),{
+    className       : 'os-theme-dark',
     sizeAutoCapable : true,
-    paddingAbsolute : true
+    paddingAbsolute : true,
   });
 
   selectInputs.forEach(el => {

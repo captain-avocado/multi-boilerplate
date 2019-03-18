@@ -1,6 +1,6 @@
 export default function infoTypes() {
   const radioLogos = document.querySelectorAll('.pay-logos__check');
-  if (radioLogos === null) return;
+  if (radioLogos.length === 0) return;
 
   function selectLogo() {
     const prevActiveLogo = document.querySelector('.pay-logos__item--is-active');
