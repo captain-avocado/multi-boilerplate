@@ -1,4 +1,4 @@
-export default function infoTypes() {
+export default function radioLogos() {
   const radioLogos = document.querySelectorAll('.pay-logos__check');
   if (radioLogos.length === 0) return;
 
@@ -11,6 +11,6 @@ export default function infoTypes() {
 
   selectLogo();
 
-  radioLogos.forEach(el => el.addEventListener('input', selectLogo));
+  radioLogos.forEach(el => el.addEventListener('change', selectLogo));
    
 }

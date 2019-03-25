@@ -16,13 +16,21 @@ export default function paymentNeed() {
     const panelsAfterFirst = firstPanel.parentElement.querySelectorAll('.panel--middle');
     const inputs = document.querySelectorAll('.panel--first > :not(.info-types)');
     if (el.classList.contains('info-types__type--not-need')) {
-      panelsAfterFirst.forEach(el => el.classList.add('panel--hidden'));
-      inputs.forEach(el => el.classList.add('hidden'));
+      // panelsAfterFirst.forEach(el => el.classList.add('panel--hidden'));
+      // inputs.forEach(el => el.classList.add('hidden'));
+
+      panelsAfterFirst.forEach(el => { el.style.display = 'none'; });
+      inputs.forEach(el => { el.style.display = 'none'; });
+
       infoPayment.style.marginBottom = 0;
 
     } else {
-      panelsAfterFirst.forEach(el => el.classList.remove('panel--hidden'));
-      inputs.forEach(el => el.classList.remove('hidden'));
+      // panelsAfterFirst.forEach(el => el.classList.remove('panel--hidden'));
+      // inputs.forEach(el => el.classList.remove('hidden'));
+
+      panelsAfterFirst.forEach(el => { el.style.display = ''; });
+      inputs.forEach(el => { el.style.display = ''; });
+
       infoPayment.style.marginBottom = '';
     }
 
@@ -42,9 +50,10 @@ export default function paymentNeed() {
     const activeInfo = infoPayment.querySelector('.info-types__type--is-active');
     if (activeInfo.classList.contains('info-types__type--not-need')) {
       popup.classList.add('popup--is-active');
-    } else {
-      location.href = 'finish.html';
     }
+    // } else {
+    //   location.href = 'finish.html';
+    // }
   });
 
    

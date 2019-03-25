@@ -3,7 +3,7 @@ import infoTypes from './infoTypes';
 
 export default function dropdownSearch() {
   //скролл дропдауна
-  OverlayScrollbars(document.querySelectorAll('.dropdown-search__list'),{
+  OverlayScrollbars(document.querySelectorAll('.dropdown-search'),{
     className       : 'os-theme-dark',
     sizeAutoCapable : true,
     paddingAbsolute : true,
@@ -11,7 +11,23 @@ export default function dropdownSearch() {
 
 
 
+  const autoComplete = {
+    "психология": [
+      "психология",
+      "психоанализ",
+      "детская психология"
+    ],
+    "обучение": [
+        "обучалка",
+        "самообучение",
+        "домашнее обучение"
+    ]
+  };
 
+  Object.keys(autoComplete).map(function(objectKey, index) {
+    var value = autoComplete[objectKey];
+    // console.log(value);
+  });  
 
   //выбрать все инпуты и иконки-триггеры
   // const inputSearch = document.querySelectorAll('.inputs__input--search');
@@ -25,12 +41,16 @@ export default function dropdownSearch() {
   function toggleDropdown(e) {
     e.preventDefault();
     const dropdownSearch = e.currentTarget.parentElement.querySelector('.dropdown-search');
+
+    if (dropdownSearch.classList.contains('dropdown-search--not-active')) return;
+
     const input = dropdownSearch.nextElementSibling;
     const openLink = input.nextElementSibling;
 
     // console.log(input)
     if (dropdownSearch.classList.contains('dropdown-search--is-active')) {
       closeActiveDropdowns();
+      getAutocomplete(input, dropdownSearch);
     } else {
       closeActiveDropdowns();
       dropdownSearch.classList.add('dropdown-search--is-active');
@@ -55,11 +75,13 @@ export default function dropdownSearch() {
     e.preventDefault();
     closeActiveDropdowns();
     const dropdownSearch = e.currentTarget.parentElement.querySelector('.dropdown-search');
+    if (dropdownSearch.classList.contains('dropdown-search--not-active')) return;
     const input = dropdownSearch.nextElementSibling;
     const openLink = input.nextElementSibling;
     dropdownSearch.classList.add('dropdown-search--is-active');
     input.classList.add('select-input__input--is-active');
     openLink.classList.add('select-input__dropdown-open--is-active');
+    getAutocomplete(input, dropdownSearch);
   }
 
   function closeDropdown(e) {
@@ -68,11 +90,101 @@ export default function dropdownSearch() {
     }
   }
 
+  function getEditDistance(a, b) {
+    if (a.length === 0) return b.length; 
+    if (b.length === 0) return a.length;
+  
+    var matrix = [];
+  
+    // increment along the first column of each row
+    var i;
+    for (i = 0; i <= b.length; i++) {
+      matrix[i] = [i];
+    }
+  
+    // increment each column in the first row
+    var j;
+    for (j = 0; j <= a.length; j++) {
+      matrix[0][j] = j;
+    }
+  
+    // Fill in the rest of the matrix
+    for (i = 1; i <= b.length; i++) {
+      for (j = 1; j <= a.length; j++) {
+        if (b.charAt(i-1) == a.charAt(j-1)) {
+          matrix[i][j] = matrix[i-1][j-1];
+        } else {
+          matrix[i][j] = Math.min(matrix[i-1][j-1] + 1, // substitution
+                                  Math.min(matrix[i][j-1] + 1, // insertion
+                                           matrix[i-1][j] + 1)); // deletion
+        }
+      }
+    }
+  
+    return matrix[b.length][a.length];
+  };
+
+  function getAutocomplete(input, dropdownSearch) {
+    input.addEventListener('keyup', () => {
+      if (input.value.length > 3) {
+        let openDropdown = false;
+        const dropdownWrap = dropdownSearch.querySelector('.dropdown-search__wrapper');
+        const prevList = dropdownWrap.querySelector('ul');
+        dropdownWrap.removeChild(prevList);
+        const dropdownList = document.createElement('ul');
+        dropdownList.classList.add('dropdown-search__list');
+
+        Object.keys(autoComplete).map(function(objectKey, index) {
+          autoComplete[objectKey].forEach(value => {
+            // console.log(input.value)
+            // console.log(value)
+            if (value.includes(input.value)) {
+              
+              openDropdown = true;
+              const item = document.createElement('li');
+              item.classList.add('dropdown-search__word');
+              item.innerText = value;
+
+              item.addEventListener('click', () => { selectDropdownItem(item); });
+              dropdownList.appendChild(item)
+            }
+          });
+        });  
+        // console.log(openDropdown)
+        dropdownWrap.appendChild(dropdownList);
+        if (openDropdown) {
+          const openLink = input.nextElementSibling;
+          dropdownSearch.classList.add('dropdown-search--is-active');
+          input.classList.add('select-input__input--is-active');
+          openLink.classList.add('select-input__dropdown-open--is-active');
+        } else {
+          const openLink = input.nextElementSibling;
+          $(dropdownSearch).removeClass('dropdown-search--is-active');
+          $(input).removeClass('select-input__input--is-active');
+          $(openLink).removeClass('select-input__dropdown-open--is-active');
+        }
+      } else {
+        const openLink = input.nextElementSibling;
+          $(dropdownSearch).removeClass('dropdown-search--is-active');
+          $(input).removeClass('select-input__input--is-active');
+          $(openLink).removeClass('select-input__dropdown-open--is-active');
+      }
+    })
+  }
+
   document.addEventListener('click', closeDropdown);
-  inputSearch.forEach(el => el.addEventListener('focus', openDropdown));
+  inputSearch.forEach(el => {
+    getAutocomplete(el, el.parentElement.querySelector('.dropdown-search'));
+    // el.addEventListener('focus', openDropdown);
+    el.addEventListener('keydown', (e) => {
+      const val = el.value;
+      
+      if (e.keyCode === 13 && val.length > 3 && val.replace(/\s/g, '').length) {
+        el.closest('li').querySelector('.active-items').appendChild(createActiveItem(el.value, el.value, 'theme'));
+      }
+    })
+  });
   inputSearchIcon.forEach(el => el.addEventListener('click', toggleDropdown));
-
-
   
 
   //снять выделение с элемента
@@ -80,12 +192,12 @@ export default function dropdownSearch() {
     const dataItem = item.getAttribute('data-item');
     const dropdownSearch = item.closest('.select-input').querySelector('.dropdown-search');
 
-    const dropdownSearchItem = dropdownSearch.querySelector(`[data-item="${dataItem}"`);
-    dropdownSearchItem.querySelector('img').classList.remove('dropdown-search__icon-active--is-active');
+    const dropdownSearchItem = dropdownSearch.querySelector(`[data-item="${dataItem}"]`);
+    if(dropdownSearchItem !== null) dropdownSearchItem.querySelector('img').classList.remove('dropdown-search__icon-active--is-active');
 
     const itemsList = item.closest('.select-input').querySelector('.active-items');
 
-    const activeItem = itemsList.querySelector(`[data-item="${dataItem}"`);
+    const activeItem = itemsList.querySelector(`[data-item="${dataItem}"]`);
     if (activeItem !== null) {
       activeItem.parentElement.removeChild(activeItem);
     }
@@ -125,8 +237,18 @@ export default function dropdownSearch() {
         <div class="active-items__row">
           <div class="active-items__text">Обязанности</div>
           <div class="active-items__info-types info-types">
-            <div class="info-types__type info-types__type--is-active">ведущий</div>
-            <div class="info-types__type">ассистент</div>
+            <label class="info-types__type">
+              <input type="radio" class="info-types__radio" id="lead-speaker" name="speaker-status" value="lead-speaker" checked>
+              <div class="info-types__text">
+                ведущий
+              </div>
+            </label>
+            <label class="info-types__type">
+              <input type="radio" class="info-types__radio" id="help-speaker" name="speaker-status" value="help-speaker">
+              <div class="info-types__text">
+                ассистент
+              </div>
+            </label>
           </div>
         </div>
         <div class="active-items__row">
@@ -191,12 +313,13 @@ export default function dropdownSearch() {
 
   //присоединить элемент к списку активных элементов
   function appendActiveItem(item, itemList) {   
-    if (itemList.querySelector(`[data-item="${item.getAttribute('data-item')}"`) !== null) return;
+    if (itemList.querySelector(`[data-item="${item.getAttribute('data-item')}"]`) !== null) return;
     itemList.appendChild(item);
   }
 
   //выбрать элемент
   function selectDropdownItem(el) {
+    // console.log('select')
     const icon = el.querySelector('.dropdown-search__icon-active');
     icon.classList.toggle('dropdown-search__icon-active--is-active');
     if (icon.classList.contains('dropdown-search__icon-active--is-active')) {

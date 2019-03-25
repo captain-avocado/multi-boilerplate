@@ -47,17 +47,17 @@ const config = {
     {
       name: 'main.js',
       entry: srcPath + 'scripts/main.js',
-      dest: destPath + 'scripts/main.min.js'
+      dest: destPath + 'scripts/main.js'
     },
     {
       name: 'index.js',
       entry: srcPath + 'scripts/index.js',
-      dest: destPath + 'scripts/index.min.js'
+      dest: destPath + 'scripts/index.js'
     },
     {
-      name: 'page.js',
-      entry: srcPath + 'scripts/page.js',
-      dest: destPath + 'scripts/page.min.js'
+      name: 'ui_logic.js',
+      entry: srcPath + 'scripts/ui_logic.js',
+      dest: destPath + 'scripts/ui_logic.js'
     },
   ]
 };

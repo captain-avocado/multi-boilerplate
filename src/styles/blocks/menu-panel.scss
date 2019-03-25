@@ -1,12 +1,25 @@
 .menu-panel {
   padding: 45px 0 !important;
+  height: 100%;
+  margin-bottom: 0 !important;
+
+  &__list {
+    &--fixed {
+      position: fixed;
+      top: 95px;
+    }
+  }
 
   &__link {
     display: block;
     padding: 17px 0 17px 25%;
     position: relative;
 
-    &:hover, &--is-active {
+    &--not-active {
+      color: #C1C1CF;
+    }
+    
+    &:hover, &--is-active{
       background: linear-gradient(170.62deg, #F2F2F8 0%, #FFFFFF 93.99%);
 
       &:after {

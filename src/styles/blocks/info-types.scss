@@ -9,6 +9,18 @@
   width: -webkit-max-content; 
   width: 220px;
 
+  &--margin {
+    margin-bottom: 20px;
+  }
+
+  &--payment {
+    align-self: center;
+  }
+
+  &--no-margin {
+    margin-bottom: 0 !important;
+  }
+
   &--visits, &--web {
     width: 155px;
   }

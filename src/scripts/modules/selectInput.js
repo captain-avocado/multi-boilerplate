@@ -1,7 +1,7 @@
 export default function selectInput() {
   const selectInputs = document.querySelectorAll('.input-select');
   // console.log(selectInputs);
-  if (selectInputs === null) return;
+  if (selectInputs.length === 0) return;
 
   //скролл дропдауна
   OverlayScrollbars(document.querySelectorAll('.dropdown-input__list'),{
@@ -9,6 +9,8 @@ export default function selectInput() {
     sizeAutoCapable : true,
     paddingAbsolute : true,
   });
+
+  let changeWD = new Event('changeWD');
 
   selectInputs.forEach(el => {
     const dropdown = el.querySelector('.dropdown-input');
@@ -27,8 +29,6 @@ export default function selectInput() {
       toggleDropdown();
     });
 
-
-
     //выбор активного элемента
     function selectItem(item) {
       const prevActiveIcon = dropdown.querySelector('.dropdown-input__icon-active--is-active');
@@ -38,8 +38,15 @@ export default function selectInput() {
       const icon = item.querySelector('.dropdown-input__icon-active');
       icon.classList.toggle('dropdown-input__icon-active--is-active');
       const text = item.innerText;
+
       input.value = text;
       toggleDropdown();
+
+      if (input.getAttribute('data-wd-input-type') === 'schedule') {
+        input.dispatchEvent(new Event('changeWD', {
+          bubbles: true,
+        }));
+      }
     }
 
     const dropdownItems = dropdown.querySelectorAll('.dropdown-input__word');

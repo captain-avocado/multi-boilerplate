@@ -19,6 +19,15 @@
     }  
   }
 
+  &--not-active {
+    opacity: .5;
+  }
+
+  &--payment-need {
+    display: flex;
+    flex-direction: column;
+  }
+
   &--web-create {
     width: 460px;
     padding: 33px 25px;
@@ -99,19 +108,36 @@
     }
   }
 
+  &__text {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link {
+    margin-top: 15px;
+    color: $purple;
+  }
+
   &__title {
     font-size: 14px;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     margin-bottom: 15px;
     position: relative;
 
-    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-    width: -moz-max-content;    /* Firefox/Gecko */
-    width: -webkit-max-content; 
+    // width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    // width: -moz-max-content;    /* Firefox/Gecko */
+    // width: -webkit-max-content; 
 
     @include phones {
       font-size: 12px;
     }
+  }
+
+
+  &__title-hint {
+    font-size: 12px;
+    margin-top: 10px;
   }
 }

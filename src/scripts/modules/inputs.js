@@ -10,84 +10,41 @@ export default function inputs() {
   //скрывать и показывать при определенном выборе 
   //а также навешивать required
 
+  const widgets = document.querySelectorAll('.ajax-widget');
 
   function displayInputs() {
-    const checkedRadio = $('.info-types__radio:checked');
+    const checkedRadio = $(infoTypes).find('.info-types__radio:checked');
     const value = checkedRadio.val();
-    $(`.panel-inputs.${value}`).css('display', 'block');    
-    $(`.panel-inputs:not(.${value})`).css('display', 'none');
-    
-    $(`.inputs__item.${value}`).css('display', 'block');
-    $(`.inputs__item.${value} input`).attr('required', 'true');
 
-    $(`.inputs__item:not(.${value})`).css('display', 'none');
-    $(`.inputs__item:not(.${value}) input`).removeAttr('required');
+    // $(`.panel-inputs.${value}`).addClass('widget-visible');   
+    // $(`.panel-inputs:not(.${value})`).removeClass('widget-visible');  
+
+    $(`.panel-inputs.${value}`).removeClass('hidden');   
+    $(`.panel-inputs:not(.${value})`).addClass('hidden');   
+    
+    $(`.input-structure.${value}`).removeClass('hidden');  
+    $(`.input-structure.${value} input`).attr('required', 'true');
+
+    $(`.input-structure:not(.${value})`).addClass('hidden');  
+    $(`.input-structure:not(.${value}) input`).removeAttr('required');
+
+    if (value === 'entity') {
+      $('.entity-visible').removeClass('hidden');
+      $('.entity-hidden').addClass('hidden');
+      $('.info-types--payment').addClass('info-types--no-margin');
+    } else {
+      $('.entity-visible').addClass('hidden');
+      $('.entity-hidden').removeClass('hidden');
+      $('.info-types--payment').removeClass('info-types--no-margin');
+    }
   }
 
   displayInputs();
   
-  $('.info-types__radio').on('input', e => {
+  $('.info-types__radio').on('change', e => {
     e.preventDefault();
     displayInputs();  
   });
-
-
-  $('.tel-mask').mask('+7 (000) 000-00-00', {
-    placeholder: '+7 (___) ___-___-__',
-    onComplete: function(cep, event, input) {
-      input.attr('data-complete', 'true');
-    },
-  
-    onChange: function(cep, event, input) {
-      if (input.cleanVal().length < 10) {
-        input.attr('data-complete', 'false');
-      } else {
-        input.attr('data-complete', 'true');
-      }
-    },
-  
-    showMaskOnFocus: false, 
-    showMaskOnHover: false,
-  });
-  
-  
-  $('.date-mask').mask('00.00.0000', {
-    placeholder: '10.10.2000', 
-    onComplete: function(cep, event, input) {
-      input.attr('data-complete', 'true');
-    },
-  
-    onChange: function(cep, event, input) {
-      if (input.cleanVal().length < 10) {
-        input.attr('data-complete', 'false');
-      } else {
-        input.attr('data-complete', 'true');
-      }
-    },
-  
-    showMaskOnFocus: false, 
-    showMaskOnHover: false,
-  });
-  
-  $('.passport-mask').mask('0000 000000', {
-    placeholder: '---- ------', 
-    onComplete: function(cep, event, input) {
-      input.attr('data-complete', 'true');
-    },
-  
-    onChange: function(cep, event, input) {
-      if (input.cleanVal().length < 10) {
-        input.attr('data-complete', 'false');
-      } else {
-        input.attr('data-complete', 'true');
-      }
-    },
-  
-    showMaskOnFocus: false, 
-    showMaskOnHover: false,
-  });
-
-
 
 
 

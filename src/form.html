@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" class="logo">
+          <img class="logo__img" src="images/content/webiray.svg" alt="logo">
+        </a>
+      </div>
+      <a href="./" class="header__text">Личный кабинет</a>
+      <div class="header__info">
+        <a href="#" class="header__help">Помощь</a>
+        <div class="header__more">
+          <div class="header__avatar avatar" style="background-image: url(images/content/webiray.svg)"></div>
+          <div class="acc-dropdown">
+            <div class="acc-dropdown__info">
+              <a href="#" class="acc-dropdown__avatar avatar" style="background-image: url(images/content/webiray.svg)">
+                <img src="images/content/download.svg" alt="" class="acc-dropdown__download">
+                <input type="file" class="acc-dropdown__input">
+              </a>
+              <div class="acc-dropdown__full-name">Котенко Лариса Батьковна</div>
+            </div>
+            <a href="#" class="acc-dropdown__exit">
+              Выход
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__content">
+        <div class="content web-create">
+          <div class="web-create__header">
+            <div class="web-create__title">Создайте свой первый вебинар и начинайте зарабатывать уже сегодня!</div>
+            <ul class="web-create__steps create-steps">
+              <li class="create-steps__item create-steps__item--is-active" data-page="personal-page">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Личные данные</div>
+                <div class="create-steps__num">1</div>
+              </li>
+              <li class="create-steps__item" data-page="webinar-page">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">О вебинаре</div>
+                <div class="create-steps__num">2</div>
+              </li>
+              <li class="create-steps__item" data-page="payment-page">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Платежные данные</div>
+                <div class="create-steps__num">3</div>
+              </li>
+              <li class="create-steps__item" data-page="finish-page">
+                <div class="create-steps__point"></div>
+                <div class="create-steps__text">Финишная прямая</div>
+                <div class="create-steps__num">4</div>
+              </li>
+            </ul>
+          </div>
+          <div class="web-create__inputs personal-page page">
+            <form class="web-create__inputs-wrapper">
+              <div class="web-create__inputs-title">Расскажите о себе</div>
+              <div class="panel panel-inputs panel--web-create web-create__inputs-area individ ip entity">
+                <div class="web-create__info-types info-types info-types--legal">
+
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio wd-input" id="individ" name="wd-anketa-type"
+                      value="individ" checked>
+                    <div class="info-types__text">
+                      Физ. лицо
+                    </div>
+                  </label>
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio wd-input" id="ip" name="wd-anketa-type" value="ip">
+                    <div class="info-types__text">
+                      ИП
+                    </div>
+                  </label>
+                  <label class="info-types__type info-types__type--small">
+                    <input type="radio" class="info-types__radio wd-input" id="entity" name="wd-anketa-type"
+                      value="entity">
+                    <div class="info-types__text">
+                      Юр. лицо
+                    </div>
+                  </label>
+                </div>
+                <ul class="inputs first-info">
+                  <li class="inputs__item input-structure default individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Фамилия</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_personal-f">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Имя</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_personal-i">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Отчество</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_personal-o">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Название компании</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-company_name">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default ip entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ИНН</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-inn">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ЕГРИП</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ip-egrip">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <!---->
+
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">КПП</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-kpp">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ОГРН</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-ogrn">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ФИО Генерального директора</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-fiodir">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ФИО Генерального директора в родительном падеже</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-fiodir_rp">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure default entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Действует на основании</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-powered_by">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel-inputs default panel--web-create individ ip">
+                <ul class="inputs">
+                  <li class="inputs__item input-structure  individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Телефон</div>
+                      <input type="text" class="inputs__input tel-mask wd-input"
+                        id="wd-anketa-data_personal-phone_number">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure  individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">E-mail</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_personal-email">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure  individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Город, страна</div>
+                      <input type="text" placeholder="например, Москва, Россия" class="inputs__input wd-input"
+                        id="wd-anketa-data_personal-location">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure  individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Дата рождения</div>
+                      <input type="text" placeholder="дд.мм.гг" class="inputs__input date-mask wd-input"
+                        id="wd-anketa-data_personal-dob">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure  individ ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Профессиональные интересы</div>
+                      <input type="text" placeholder="например, психология, психоанализ" class="inputs__input wd-input"
+                        id="wd-anketa-data_personal-interests">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel-inputs default panel--web-create entity">
+                <ul class="inputs">
+                  <li class="inputs__item input-structure entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Телефон компании</div>
+                      <input type="text" class="inputs__input tel-mask wd-input" id="wd-anketa-data_ul-company_phone">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">E-mail компании</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_ul-company_email">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Род деятельности</div>
+                      <input type="text" placeholder="например, Москва, Россия" class="inputs__input wd-input"
+                        id="wd-anketa-data_ul-company_sphere">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel-inputs default panel--web-create entity">
+                <ul class="inputs">
+                  <li class="inputs__item input-structure entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Юридический адрес</div>
+                      <input type="text" placeholder="например, Москва, Россия"
+                        class="inputs__input inputs__input--addr wd-input" id="wd-anketa-data_ul-adress_location">
+                      <input type="text" placeholder="например, Невский пр., дом 1, кв. 1"
+                        class="inputs__input wd-input" id="wd-anketa-data_ul-adress_street">
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure entity">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Фактический адрес</div>
+                      <label class="inputs__match">
+                        <div class="inputs__match-text">Совпадает с юридическим</div>
+                        <input type="checkbox" class="inputs__match-check inputs__match--addr-ur wd-input"
+                          id="wd-anketa-data_ul-adress_equals">
+                        <div class="inputs__match-fake"></div>
+                      </label>
+                      <input type="text" placeholder="например, Москва, Россия"
+                        class="inputs__input inputs__input--addr wd-input" id="wd-anketa-data_ul-adress_location_real">
+                      <input type="text" placeholder="например, Невский пр., дом 1, кв. 1"
+                        class="inputs__input wd-input" id="wd-anketa-data_ul-adress_street_real">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel-inputs default panel--web-create entity ip">
+                <ul class="inputs">
+                  <li class="inputs__item input-structure entity ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Контактное лицо</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_contacts-contact_fio">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure entity ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">E-mail</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-anketa-data_contacts-contact_email">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item input-structure entity ip">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Телефон</div>
+                      <input type="text" placeholder="например, Москва, Россия" class="inputs__input tel-mask wd-input"
+                        id="wd-anketa-data_contacts-contact_phone">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="web-create__step-panels">
+                <div class="panel panel--web-create panel--step panel--next">
+                  <button type="submit" data-direction="webinar-page" class="step web-create__step">
+                    Далее
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--wd-anketa-type-->
+          <div class="web-create__inputs webinar-page page">
+            <div class="web-create__inputs-wrapper">
+              <div class="web-create__inputs-title">Информация о вебинаре</div>
+              <div class="panel panel--web-create web-create__inputs-area">
+                <ul class="inputs first-info">
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Придумайте название для своего первого Вебинара</div>
+                      <input type="text" class="inputs__input wd-input" id="wd-webinar-general_data-name">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item select-input" id="wd-webinar-general_data-directions">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Выберите направление</div>
+                      <div class="dropdown-search">
+                        <div class="dropdown-search__wrapper">
+                          <ul class="dropdown-search__list">
+                            <li class="dropdown-search__item">
+                              <div class="dropdown-search__title">Психология и психоанализ</div>
+                              <div class="dropdown-search__word" data-item="psycho1" data-type="theme">психология
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                              <div class="dropdown-search__word" data-item="psycho2" data-type="theme">психоанализ
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                              <div class="dropdown-search__word" data-item="psycho3" data-type="theme">детская
+                                психология
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item">
+                              <div class="dropdown-search__title">Психология и психоанализ</div>
+                              <div class="dropdown-search__word" data-item="psycho4" data-type="theme">психология
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                              <div class="dropdown-search__word" data-item="psycho5" data-type="theme">психоанализ
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                              <div class="dropdown-search__word" data-item="psycho6" data-type="theme">детская
+                                психология
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <input data-wd-input-field="wd-webinar-general_data-name-directions"
+                        data-wd-input-type="directions" type="text" id="webinar-theme"
+                        placeholder="например, психология"
+                        class="inputs__input select-input__input inputs__input--search">
+                      <a href="#" class="inputs__dropdown-open select-input__dropdown-open">
+                        <img src="images/content/angle-search.svg" alt="open-dropdown"
+                          class="inputs__dropdown-icon inputs__dropdown-icon--select select-input__dropdown-icon select-input__dropdown-icon--select">
+                      </a>
+
+                    </label>
+
+
+                    <ul class="active-items wd-input">
+
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div id="webinar-speakers" class="panel panel--web-create panel--not-active web-create__inputs-area"
+                id="webinar-speakers">
+                <ul class="inputs">
+                  <li class="inputs__item select-input" id="wd-webinar-general_data-leaders">
+                    <label for="" class="inputs__label">
+                      <div class="panel__title">
+                        <div class="panel__title-text">Ведущие</div>
+                        <div class="panel__title-hint">
+                          Ведущий должен быть зарегистрирован на сайте, как
+                          пользователь. Также их можно добавить позже в Личном кабинете во вкладке “Вебинар”
+                        </div>
+
+                      </div>
+                      <div class="dropdown-search dropdown-search--not-active">
+                        <div class="dropdown-search__wrapper">
+                          <ul class="dropdown-search__list">
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author1" data-type="lead">Котенко Анна
+                                Дмитриевна
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author2" data-type="lead">Котенко Инна
+                                Дмитриевна
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author3" data-type="lead">Котенко Ольга
+                                Дмитриевна
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author4" data-type="lead">Котенко Иван
+                                Дмитриевич
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author5" data-type="lead">Котенко Алла
+                                Дмитриевна
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                            <li class="dropdown-search__item dropdown-search__item--lead">
+                              <div class="dropdown-search__avatar"></div>
+                              <div class="dropdown-search__word" data-item="author6" data-type="lead">Котенко Оксана
+                                Дмитриевна
+                                <img src="images/content/icon-active.svg" alt="icon-active"
+                                  class="dropdown-search__icon-active">
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <input readonly data-wd-input-field="wd-webinar-general_data-name-leaders"
+                        data-wd-input-type="leaders" type="text" placeholder="поиск по базе ведущих Webiray.com"
+                        class="inputs__input select-input__input inputs__input--search wd-input"
+                        id="wd-webinar-general_data-leaders">
+                      <a href="#" class="inputs__dropdown-open select-input__dropdown-open">
+                        <img src="images/content/search.svg" alt="open-dropdown"
+                          class="inputs__dropdown-icon select-input__dropdown-icon">
+                      </a>
+                    </label>
+                    <ul class="active-items">
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!--webinar-time-->
+              <div id="wd-webinar-general_data-schedule" class="panel web-create__inputs-area date-panel">
+                <div class="date-panel__title">Дата и время проведения</div>
+                <div class="date-panel__types-row">
+                  <div class="date-panel__types-text">По времени</div>
+                  <div class="info-types info-types--time">
+                    <label class="info-types__type">
+                      <input data-wd-input-type="schedule" type="radio" class="info-types__radio wd-input"
+                        id="webinar-time-limited" name="wd-webinar-general_data-schedule-time_limited" value="1"
+                        data-wd-input-field="wd-webinar-general_data-schedule" checked>
+                      <div class="info-types__text">
+                        ограничен
+                      </div>
+                    </label>
+                    <label class="info-types__type">
+                      <input type="radio" data-wd-input-type="schedule" class="info-types__radio wd-input"
+                        id="webinar-time-unlimited" name="wd-webinar-general_data-schedule-time_limited"
+                        data-wd-input-field="wd-webinar-general_data-schedule" value="0">
+                      <div class="info-types__text">
+                        не ограничен
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="date-panel__date">
+                  <div class="date-panel__subtitle">Выберите дату начала и конца вебинара</div>
+                  <div class="date-panel__calendar calendar" id="form-calendar">
+                    <div class="calendar__header">
+                      <a href="#" class="calendar__control calendar__control--prev">
+                        <img class="calendar__angle" src="images/content/angle-left.svg">
+                      </a>
+                      <div class="calendar__month">Март 2019</div>
+                      <a href="#" class="calendar__control calendar__control--next">
+                        <img class="calendar__angle" src="images/content/angle-right.svg">
+                      </a>
+                    </div>
+                    <table class="calendar__table">
+                      <tr class="calendar__row calendar__row--week">
+                        <th class="calendar__cell calendar__cell--week">пн</th>
+                        <th class="calendar__cell calendar__cell--week">вт</th>
+                        <th class="calendar__cell calendar__cell--week">ср</th>
+                        <th class="calendar__cell calendar__cell--week">чт</th>
+                        <th class="calendar__cell calendar__cell--week">пт</th>
+                        <th class="calendar__cell calendar__cell--week">сб</th>
+                        <th class="calendar__cell calendar__cell--week">вс</th>
+                      </tr>
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            25
+                          </div>
+                        </td>
+
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            26
+                          </div>
+                        </td>
+
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            27
+                          </div>
+                          <!-- <div class="popup-panel popup-panel--calendar">
+                                        24.11.2018 Психоанализ
+                                      </div> -->
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            28
+                          </div>
+                          <!-- <div class="popup-panel popup-panel--calendar">
+                                        24.11.2018 Психоанализ
+                                      </div> -->
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            1
+                          </div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            2
+                          </div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">
+                            3
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">4</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">5</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">6</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">7</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">8</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">9</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class="calendar__cell-content">10</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">11</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">12</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">13</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">14</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">15</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">16</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">17</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">18</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">19</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">20</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">21</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">22</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">23</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">24</div>
+                        </td>
+                      </tr>
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">25</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">26</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">27</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">28</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">29</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">30</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">31</div>
+                        </td>
+                      </tr>
+
+                      <tr class="calendar__row">
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">25</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">26</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">27</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">28</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">29</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">30</div>
+                        </td>
+                        <td class="calendar__cell">
+                          <div class=" calendar__cell-content">31</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="date-panel__time">
+                  <div class="date-panel__subtitle">Выберите время начала и конца вебинара</div>
+                  <div class="date-panel__time-inputs">
+                    <div class="date-panel__time-input time-input time-input--start">
+                      <input type="text" id="time-start-hour"
+                        class="time-input__input time-input__input--hours time-mask"
+                        data-wd-input-field="wd-webinar-general_data-schedule" data-wd-input-type="schedule">
+                      <span class="time-input__colon">:</span>
+                      <input type="text" id="time-start-min" class="time-input__input time-input__input--mins time-mask"
+                        data-wd-input-field="wd-webinar-general_data-schedule" data-wd-input-type="schedule">
+                    </div>
+                    <div class="time-input time-input--end">
+                      <input type="text" id="time-end-hour" class="time-input__input time-input__input--hours wd-input  time-mask">
+                      <span class="time-input__colon">:</span>
+                      <input type="text" id="time-end-min" class="time-input__input time-input__input--mins wd-input time-mask">
+                    </div>
+                  </div>
+                </div>
+                <div class="date-panel__timezone">
+                  <div class="date-panel__subtitle">Выберите часовой пояс</div>
+                  <div class="date-panel__select-input input-select select-input--timezone">
+                    <div class="dropdown-input">
+                      <div class="dropdown-input__wrapper">
+                        <ul class="dropdown-input__list">
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +00:00 Западноевропейское время" data-type="lead">GMT +00:00 Западноевропейское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +01:00 Центральноевропейское время" data-type="lead">GMT +01:00 Центральноевропейское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +02:00 Калининградское время" data-type="lead">GMT +02:00 Калининградское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +03:00 Московское время" data-type="lead">GMT +03:00 Московское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active dropdown-input__icon-active--is-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +04:00 Самарское время" data-type="lead">GMT +04:00 Самарское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +05:00 Екатеринбургское время" data-type="lead">GMT +05:00 Екатеринбургское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +06:00 Омское время" data-type="lead">GMT +06:00 Омское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +07:00 Красноярское время" data-type="lead">GMT +07:00 Красноярское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +08:00 Иркутское время" data-type="lead">GMT +08:00 Иркутское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +09:00 Якутское время" data-type="lead">GMT +09:00 Якутское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +10:00 Владивостокское время" data-type="lead">GMT +10:00 Владивостокское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +11:00 Среднеколымское время" data-type="lead">GMT +11:00 Среднеколымское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT +12:00 Камчатское время" data-type="lead">GMT +12:00 Камчатское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT -03:00 Аргентинское время" data-type="lead">GMT -03:00 Аргентинское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT -04:00 Атлантическое время" data-type="lead">GMT -04:00 Атлантическое время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT -05:00 Перуанское время" data-type="lead">GMT -05:00 Перуанское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+                          <li class="dropdown-input__item">
+                            <div class="dropdown-input__word" data-item="GMT -08:00 Тихоокенское время" data-type="lead">GMT -08:00 Тихоокенское время
+                              <img src="images/content/icon-active.svg" alt="icon-active"
+                                class="dropdown-input__icon-active">
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                    <input data-wd-input-field="wd-webinar-general_data-schedule" data-wd-input-type="schedule"
+                      type="text" readonly class="input-select__input select-input__input--timezone wd-input"
+                      id="wd-webinar-general_data-schedule-timezone" value="GMT +03:00 Московское время">
+                    <a href="#" class="input-select__dropdown-open">
+                      <img src="images/content/angle-search.svg" alt="open-dropdown"
+                        class="input-select__dropdown-icon">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="web-create__step-panels">
+                <div class="panel panel--web-create panel--step panel--prev">
+                  <a href="personal-data.html" data-direction="personal-page" class="step web-create__step">
+                    Назад
+                  </a>
+                </div>
+                <div class="panel panel--web-create panel--step panel--next">
+                  <a href="payment-data.html" data-direction="payment-page" class="step web-create__step">
+                    Далее
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-create__inputs payment payment-page page">
+            <div class="web-create__inputs-wrapper">
+              <div class="web-create__inputs-title">Подключение оплаты вебинаров</div>
+              <div class="panel panel--first panel--web-create web-create__inputs-area">
+                <div class="info-types payment__info-types info-types--payment">
+                  <input type="checkbox" class="info-types__checkbox">
+                  <div
+                    class="info-types__type info-types__type--payment info-types__type--need info-types__type--is-active">
+                    Требуется</div>
+                  <div class="info-types__type info-types__type--payment info-types__type--not-need">Не требуется</div>
+                </div>
+                <div class="input-area__title entity-hidden">Паспортные данные</div>
+                <ul class="input-area__inputs inputs entity-hidden">
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ФИО</div>
+                      <input type="text" class="inputs__input wd-input fio-input"
+                        id="wd-webinar-payments_data-passport-fio">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Серия, номер</div>
+                      <input type="text" class="inputs__input tel wd-input"
+                        id="wd-webinar-payments_data-passport-passport_sn">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Кем и когда выдан</div>
+                      <input placeholder="например, 1ОМ Центрального района ...," type="text"
+                        class="inputs__input wd-input" id="wd-webinar-payments_data-passport-passport_kkv">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Адрес регистрации</div>
+                      <input placeholder="например, Невский пр., дом 1, кв. 1" type="text"
+                        class="inputs__input inputs__input--addr-reg wd-input"
+                        id="wd-webinar-payments_data-passport-adress_reg">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item inputs__item--addr-fact">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Адрес фактического проживания</div>
+                      <input placeholder="например, Невский пр., дом 1, кв. 1" type="text"
+                        class="inputs__input inputs__input--addr-fact wd-input"
+                        id="wd-webinar-payments_data-passport-adress_real">
+                      <div class="inputs__hint"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label class="inputs__match">
+                      <div class="inputs__match-text">Совпадает с адресом регистрации</div>
+                      <input type="checkbox" class="inputs__match-check inputs__match--addr-reg wd-input"
+                        id="wd-webinar-payments_data-passport-adress_equals">
+                      <div class="inputs__match-fake"></div>
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Загрузить скан паспорта</div>
+                      <div class="inputs__wrapper">
+                        <div class="inputs__input inputs__input--fake">
+                          перетащите файл сюда или нажмите +
+                        </div>
+                        <input type="file" class="inputs__file"
+                          id="wd-webinar-payments_data-passport-passport_scan_path wd-input">
+                        <a href="#" class="inputs__download">
+                          <img src="images/content/plus.svg" alt="plus" class="inputs__download-icon">
+                        </a>
+                      </div>
+                      <div class="inputs__hint inputs__hint--last">можно загружать файлы с разрешением JPG, PNG, PDF
+                        размер не более 5 Мб</div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel--middle panel--web-create web-create__inputs-area">
+                <div class="input-area__title">Банковские данные</div>
+                <ul class="input-area__inputs inputs">
+                  <li class="inputs__item entity-hidden">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">ФИО</div>
+                      <input type="text" class="inputs__input fio-input">
+                    </label>
+                  </li>
+                  <li class="inputs__item entity-hidden">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Номер счета</div>
+                      <input type="text" class="inputs__input wd-input"
+                        id="wd-webinar-payments_data-bank_account-bank_account_num">
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Название банка</div>
+                      <input placeholder="например, Сбербанк" type="text" class="inputs__input  wd-input"
+                        id="wd-webinar-payments_data-bank_account-bank_name">
+                    </label>
+                  </li>
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">БИК</div>
+                      <input type="text" class="inputs__input inputs__input--addr-reg wd-input"
+                        id="wd-webinar-payments_data-bank_account-bank_bik">
+                    </label>
+                  </li>
+                  <li class="inputs__item inputs__item--addr-fact">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Корреспондентский счет</div>
+                      <input type="text" class="inputs__input inputs__input--addr-fact wd-input"
+                        id="wd-webinar-payments_data-bank_account-bank_corr">
+                    </label>
+                  </li>
+                  <li class="inputs__item inputs__item--addr-fact entity-visible">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__text">Расчетный счет</div>
+                      <input type="text" class="inputs__input inputs__input--addr-fact wd-input" id="bank_corr">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel panel--middle panel--web-create web-create__inputs-area">
+                <div class="input-area__title">Прием платежей</div>
+                <ul class="pay-logos">
+                  <li class="pay-logos__item">
+                    <label for="pay-way1" class="pay-logos__label">
+                      <div class="pay-logos__input">
+                        <input type="radio" data-wd-input-type="radio" name="pay-way" id="pay-way1" checked
+                          class="pay-logos__check">
+                        <div class="pay-logos__checkbox-fake"></div>
+                        <div class="pay-logos__text">Банковские карты</div>
+                      </div>
+                      <div class="pay-logos__logos">
+                        <img src="images/content/visa.svg" alt="visa" class="pay-logos__logo">
+                        <img src="images/content/mastercard.svg" alt="mastercard" class="pay-logos__logo">
+                        <img src="images/content/mir.svg" alt="mir" class="pay-logos__logo">
+                      </div>
+                    </label>
+                  </li>
+                  <li class="pay-logos__item">
+                    <label for="pay-way2" class="pay-logos__label">
+                      <div class="pay-logos__input">
+                        <input type="radio" data-wd-input-type="radio" name="pay-way" id="pay-way2"
+                          class="pay-logos__check">
+                        <div class="pay-logos__checkbox-fake"></div>
+                        <div class="pay-logos__text">Платежные терминалы</div>
+                      </div>
+                      <div class="pay-logos__logos">
+                        <img src="images/content/qiwi.svg" alt="qiwi" class="pay-logos__logo">
+                        <img src="images/content/pskb.svg" alt="pskb" class="pay-logos__logo">
+                      </div>
+                    </label>
+                  </li>
+                  <li class="pay-logos__item pay-logos__item--is-active">
+                    <label for="pay-way3" class="pay-logos__label">
+                      <div class="pay-logos__input">
+                        <input type="radio" data-wd-input-type="radio" name="pay-way" id="pay-way3"
+                          class="pay-logos__check">
+                        <div class="pay-logos__checkbox-fake"></div>
+                        <div class="pay-logos__text">Мобильные кошельки</div>
+                      </div>
+                      <div class="pay-logos__logos">
+                        <img src="images/content/yd.svg" alt="yd" class="pay-logos__logo">
+                        <img src="images/content/qiwi.svg" alt="qiwi" class="pay-logos__logo">
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="web-create__step-panels">
+                <div class="panel panel--web-create panel--step panel--prev">
+                  <a href="personal-data.html" data-direction="webinar-page" class="step web-create__step">
+                    Назад
+                  </a>
+                </div>
+                <div class="panel panel--web-create panel--step panel--next">
+                  <a href="#" data-direction="finish-page" class="step web-create__step web-create__step--pay-next">
+                    Далее
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="web-create__inputs finish-page page">
+            <div class="web-create__inputs-wrapper landings">
+              <div class="web-create__inputs-title">Визуальное оформление вебинара</div>
+              <div class="panel panel--first panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__title">Посадочная страница</div>
+                <div class="input-info__text">Мы расширили функционал стандартной посадочной страницы вебинара до
+                  полноценного лендинга, который Вы можете настроить и отредактировать как Ваш личный самостоятельный
+                  сайт.</div>
+                <div class="info-types info-types--land-status input-info__info-types">
+                  <label class="info-types__type">
+                    <input type="radio" data-wd-input-type="radio" class="info-types__radio" id="no-landing"
+                      name="landing" value="no">
+                    <div class="info-types__text">
+                      нет
+                    </div>
+                  </label>
+                  <label class="info-types__type">
+                    <input type="radio" data-wd-input-type="radio" class="info-types__radio" id="yes-landing"
+                      name="landing" value="yes" checked>
+                    <div class="info-types__text">
+                      есть
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="panel panel--second panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__text">Оформление посадочной страницы может занять некоторое время. Вы сможете
+                  сформировать её и позже в Личном кабинете во вкладке “Вебинар”</div>
+                <div class="info-types info-types--land-time input-info__info-types">
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="later-landing" name="landing-time" value="later">
+                    <div class="info-types__text">
+                      потом
+                    </div>
+                  </label>
+                  <label class="info-types__type">
+                    <input type="radio" class="info-types__radio" id="now-landing" name="landing-time" value="now"
+                      checked>
+                    <div class="info-types__text">
+                      сейчас
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="panel panel--third panel--web-create web-create__inputs-area input-info">
+                <div class="input-info__title">Выбрать шаблон страницы</div>
+                <div class="input-info__text">После выбора шаблона Вы будете перенаправлены в конструктор вебинаров
+                </div>
+                <ul class="input-info__inputs inputs">
+                  <li class="inputs__item">
+                    <label for="" class="inputs__label">
+                      <div class="inputs__wrapper">
+                        <input type="text" class="inputs__input">
+                        <a href="#" class="inputs__more">
+                          <img src="images/content/land.svg" alt="plus" class="inputs__more-icon">
+                        </a>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <img class="landings__image" src="images/content/bg-land.jpg" alt="">
+              <div class="web-create__step-panels">
+                <div class="panel panel--web-create panel--step panel--prev">
+                  <a href="personal-data.html" data-direction="payment-page" class="step web-create__step">
+                    Назад
+                  </a>
+                </div>
+                <div class="panel panel--web-create panel--step panel--next">
+                  <a href="#" class="web-create__step web-create__step--pay-next">
+                    Далее
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="popup popup--need">
+      <div class="popup__content">
+        <div class="popup__top-panels">
+          <div class="popup__panel">
+            Вы уверены, что хотите проводить бесплатные вебинары?
+          </div>
+        </div>
+        <div class="popup__bottom-panels">
+          <div class="popup__panel popup__panel--btn">
+            <a href="#" class="popup__close popup__close--confirm web-create__step">Назад</a>
+          </div>
+          <div class="popup__panel popup__panel--btn">
+            <a href="finish.html" data-direction="finish-page" class="step popup__next web-create__step">Да</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup--webiray">
+      <div class="popup__content popup__content--subscribe">
+        <a href="#" class="popup__close popup__close--subscribe">
+          <img src="images/content/cross-popup.svg" class="popup__icon popup__icon-close">
+        </a>
+        <div class="popup__container">
+          <div class="popup__title popup__title--subscribe">
+            <div class="popup__title--big">совсем скоро новенькое</div>
+            <div class="popup__title--big">будет опубликовано</div>
+          </div>
+          <form class="popup__form" id="webiray-subscribe">
+            <div class="popup__input-wrap">
+              <div class="popup__input-text">Хотите быть среди первых, кто узнает об обновления сервиса? Мы сообщим!
+              </div>
+              <input id="subscribe" placeholder="email" type="text" class="popup__input">
+            </div>
+            <button type="submit" id="subscribe-btn" class="popup__btn popup__btn--reg-confirm">Держите меня в
+              курсе</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup--webinar">
+      <div class="popup__content popup__content--landings">
+        <a href="#" class="popup__close">
+          <img src="images/content/cross-popup.svg" class="popup__icon popup__icon-close">
+        </a>
+        <div class="popup__title">Варианты шаблонов</div>
+        <div class="popup__info-types info-types">
+          <label class="info-types__type">
+            <input type="radio" class="info-types__radio" id="pay-landings" name="landing-types" value="pay" checked>
+            <div class="info-types__text">
+              бесплатные
+            </div>
+          </label>
+          <label class="info-types__type">
+            <input type="radio" readonly class="info-types__radio" id="free-landings" name="landing-types" value="free">
+            <div class="info-types__text subscribe">
+              платные
+            </div>
+          </label>
+        </div>
+        <div class="popup__text">После выбора шаблона Вы будете переведены на страницу конструктора для редактирования
+          контента</div>
+        <div class="popup__landings">
+          <ul class="popup__landing-list">
+            <li class="popup__landing-item">
+              <div class="landing">
+                <div class="landing__info">Больше текста</div>
+                <div class="landing__block">
+                  <div class="landing__img" style="background-image: url(images/content/bg1.jpg);"></div>
+                  <div class="landing__descr">
+                    <div class="landing__name">Психология</div>
+                    <div class="landing__icons">
+                      <a href="#" class="landing__view">
+                        <svg class="landing__icon">
+                          <use xlink:href="images/sprite.svg#view"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="landing__check">
+                        <svg class="landing__icon">
+                          <use xlink:href="images/sprite.svg#check"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="popup__landing-item">
+              <div class="landing">
+                <div class="landing__info">Больше изображений</div>
+                <div class="landing__block">
+                  <div class="landing__img" style="background-image: url(images/content/bg2.jpg);"></div>
+                  <div class="landing__descr">
+                    <div class="landing__name">Арт-студия</div>
+                    <div class="landing__icons">
+                      <a href="#" class="landing__view">
+                        <svg class="landing__icon">
+                          <use xlink:href="images/sprite.svg#view"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="landing__check">
+                        <svg class="landing__icon">
+                          <use xlink:href="images/sprite.svg#check"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="popup__more subscribe">Посмотреть еще...</a>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/ui_logic.js"></script>
+  <script src="./scripts/dd_autocomplete.js"></script>
+</body>
+
+</html>

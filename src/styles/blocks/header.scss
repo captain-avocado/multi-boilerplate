@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 10000;
   display: flex;
   background-color: #fff;
   transition: background-color .35s;
   align-items: center;
+  
 
   &__logo {
     padding: 15px;

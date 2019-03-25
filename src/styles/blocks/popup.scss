@@ -34,8 +34,18 @@
     transform: translate(-50%, -50%) scale(1.2);
     font-size: 14px;
 
+    &--tmp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 50px 35px;
+      width: 950px;
+      background: #FFFFFF;
+      border-radius: 15px;
+    }
 
-    &--landings {
+    &--landings, &--add {
       background: #FFFFFF;
       border-radius: 15px;
       width: 520px;
@@ -66,6 +76,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
+
+    &--confirm {
+      position: static;
+    }
   }
 
   &__icon {
@@ -95,6 +109,11 @@
     padding: 7px;
     margin-bottom: 25px;
     font-family: 'PlumbCondensed';
+
+    &::placeholder {
+      color: #fff;
+      opacity: .7;
+    }
   }
 
   &__input-text {
